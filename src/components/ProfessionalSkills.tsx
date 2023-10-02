@@ -1,10 +1,11 @@
 import { For } from "solid-js";
 import { professionalSkills } from "~/constants";
+import TitleGSAP from "./helper/Title.gsap";
 
 const ProfessionalSkills = () => {
   return (
     <main class="min-h-[calc(min(100vh,100vw))]">
-      <h1 class="font-semibold text-4xl py-4">Professional Skills</h1>
+      <TitleGSAP id="professional" title="Professional Skills" />
       <div class="max-w-4xl w-full overflow-hidden mx-auto flex flex-wrap justify-center gap-4 py-8">
         <style>{`#shadow:hover {box-shadow: 0 0 15px #8f60f8}`}</style>
         <For each={professionalSkills}>

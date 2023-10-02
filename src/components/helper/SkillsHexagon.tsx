@@ -1,6 +1,6 @@
 import { For } from "solid-js";
 
-const SkillHexagon = (props: any) => {
+const SkillHexagon = ({ skill }: { skill: string }) => {
   const sidesRotations = [
     [0, 0],
     [60, 0],
@@ -28,8 +28,8 @@ const SkillHexagon = (props: any) => {
         <div class="absolute w-[48px] h-[84px] rotate-[120deg] bg-primary" />
         <div class="absolute grid place-items-center w-[48px] h-[84px] bg-primary">
           <img
-            src={"skills/" + props.skill + ".png"}
-            alt={props.skill + " logo"}
+            src={"skills/" + skill + ".png"}
+            alt={skill + " logo"}
             class="w-3/4"
           />
         </div>

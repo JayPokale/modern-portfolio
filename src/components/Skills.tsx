@@ -1,6 +1,7 @@
 import { For, onMount } from "solid-js";
 import SkillHexagon from "./helper/SkillsHexagon";
 import { skills } from "~/constants";
+import TitleGSAP from "./helper/Title.gsap";
 
 const Skills = () => {
   onMount(() => {
@@ -28,12 +29,10 @@ const Skills = () => {
 
   return (
     <main class="min-h-[calc(min(100vh,100vw))]">
-      <h1 class="font-semibold text-4xl py-4">
-        Skills <span class="text-2xl text-heading">(Tech Stack)</span>
-        <div class="max-w-5xl mx-auto py-16 flex flex-wrap justify-center gap-4 overflow-hidden">
-          <For each={skills}>{(skill) => <SkillHexagon skill={skill} />}</For>
-        </div>
-      </h1>
+      <TitleGSAP id="skills" title="Skills (Tech Stack)" />
+      <div class="max-w-5xl mx-auto py-16 flex flex-wrap justify-center gap-4 overflow-hidden">
+        <For each={skills}>{(skill) => <SkillHexagon skill={skill} />}</For>
+      </div>
     </main>
   );
 };

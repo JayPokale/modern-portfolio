@@ -1,10 +1,11 @@
 import OverviewBlocks from "./helper/OverviewBlocks";
+import TitleGSAP from "./helper/Title.gsap";
 
 const Overview = () => {
   return (
     <main class="min-h-[calc(min(100vh,100vw))] flex flex-col lg:flex-row">
       <div class="w-full lg:w-1/2">
-        <h1 class="font-semibold text-4xl py-4">Overview</h1>
+        <TitleGSAP id="overview" title="Overview" />
         <div class="flex gap-8 px-8">
           <div class="h-48 w-1 -translate-y-0.5 bg-gradient-to-b rounded-t-full from-white" />
           <p class="w-3/4 text-xl text-justify">
