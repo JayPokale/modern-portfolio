@@ -1,0 +1,15 @@
+.card-outer {
+  background: radial-gradient(
+    800px circle at var(--pos-x) var(--pos-y),
+    rgba(255, 255, 255, 0.5),
+    transparent 40%
+  );
+}
+
+.card-inner::before {
+  background: radial-gradient(
+    600px circle at var(--pos-x) var(--pos-y),
+    rgba(255, 255, 255, 0.05),
+    transparent 40%
+  );
+}
