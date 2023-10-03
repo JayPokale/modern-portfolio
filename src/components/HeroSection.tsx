@@ -2,7 +2,7 @@ import ImageTransition from "./helper/HeroSectionImageTransition";
 
 const HeroSection = () => {
   return (
-    <section class="min-h-[calc(2*min(100vh,100vw))] grid grid-rows-4 md:grid-rows-2 md:grid-cols-2">
+    <main class="min-h-[calc(2*min(100vh,100vw))] grid grid-rows-4 md:grid-rows-2 md:grid-cols-2">
       <div class="flex justify-center items-center gap-6">
         <div class="min-h-[50%]">
           <div
@@ -42,7 +42,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

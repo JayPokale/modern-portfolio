@@ -1,7 +1,9 @@
 import { For, onMount } from "solid-js";
 import SkillHexagon from "./helper/SkillsHexagon";
 import { skills } from "~/constants";
-import TitleGSAP from "./helper/Title.gsap";
+import TitleGSAP from "./helper/TitleGSAP";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Skills = () => {
   onMount(() => {
@@ -27,10 +29,26 @@ const Skills = () => {
     };
   });
 
+  gsap.registerPlugin(ScrollTrigger);
+  onMount(() => {
+    gsap.to("#skill-hexagons", {
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: "#skill-hexagons",
+        start: "top 70%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  });
+
   return (
     <main class="min-h-[calc(min(100vh,100vw))]">
       <TitleGSAP id="skills" title="Skills (Tech Stack)" />
-      <div class="max-w-5xl mx-auto py-16 flex flex-wrap justify-center gap-4 overflow-hidden">
+      <div
+        id="skill-hexagons"
+        class="max-w-5xl mx-auto py-16 flex flex-wrap justify-center gap-4 overflow-hidden opacity-0"
+      >
         <For each={skills}>{(skill) => <SkillHexagon skill={skill} />}</For>
       </div>
     </main>

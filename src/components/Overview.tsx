@@ -1,6 +1,6 @@
-import gsap, { Expo } from "gsap";
+import gsap, { Expo, Power4 } from "gsap";
 import OverviewBlocks from "./helper/OverviewBlocks";
-import TitleGSAP from "./helper/Title.gsap";
+import TitleGSAP from "./helper/TitleGSAP";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { onMount } from "solid-js";
 
@@ -12,7 +12,7 @@ const Overview = () => {
       y: 0,
       opacity: 1,
       duration: 2,
-      ease: Expo.easeOut,
+      ease: Power4.easeOut,
       scrollTrigger: {
         trigger: "#overview-content",
         start: "top 70%",
@@ -24,13 +24,13 @@ const Overview = () => {
       opacity: 1,
       scale: 1,
       duration: 2,
-      stagger: 0.1,
+      stagger: 0.2,
       scrollTrigger: {
         trigger: ".overview-block",
         start: "top 70%",
         toggleActions: "play reverse play reverse",
       },
-      ease: "elastic",
+      ease: Power4.easeOut,
     });
   });
 
@@ -40,7 +40,7 @@ const Overview = () => {
         <TitleGSAP id="overview" title="Overview" />
         <div
           id="overview-content"
-          class="flex gap-8 px-8 opacity-0 -translate-y-2"
+          class="flex gap-8 px-8 opacity-0 -translate-y-5"
         >
           <div class="h-48 w-1 -translate-y-0.5 bg-gradient-to-b rounded-t-full from-white" />
           <p class="w-3/4 text-xl text-justify">

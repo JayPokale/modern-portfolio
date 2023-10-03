@@ -14,7 +14,7 @@ const TitleGSAP = ({ id, title }: props) => {
     gsap.to(`#${id}`, {
       translateY: 0,
       opacity: 1,
-      duration: 2,
+      duration: 3,
       ease: Expo.easeOut,
       scrollTrigger: {
         trigger: `#${id}`,
