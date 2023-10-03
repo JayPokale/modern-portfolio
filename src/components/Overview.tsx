@@ -1,4 +1,4 @@
-import gsap, { Expo, Power4 } from "gsap";
+import gsap, { Power4 } from "gsap";
 import OverviewBlocks from "./helper/OverviewBlocks";
 import TitleGSAP from "./helper/TitleGSAP";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -23,14 +23,14 @@ const Overview = () => {
     gsap.to(".overview-block", {
       opacity: 1,
       scale: 1,
-      duration: 2,
-      stagger: 0.2,
+      duration: 1.5,
+      stagger: 0.1,
       scrollTrigger: {
         trigger: ".overview-block",
-        start: "top 70%",
+        start: "top 60%",
         toggleActions: "play reverse play reverse",
       },
-      ease: Power4.easeOut,
+      ease: "elastic",
     });
   });
 
