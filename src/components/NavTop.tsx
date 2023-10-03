@@ -9,6 +9,13 @@ import {
 const NavTop = () => {
   return (
     <main class="w-full select-none sticky top-0 py-2 z-50">
+      <div
+        class="absolute top-0 h-16 w-full"
+        style={{
+          "background-image":
+            "linear-gradient(to bottom,  #050917 0%, #050917 60%, transparent 100%)",
+        }}
+      />
       <div class="max-w-7xl flex mx-auto justify-between items-center px-4 sticky">
         <div class="text-xl font-semibold">Jay Pokale</div>
         <div>

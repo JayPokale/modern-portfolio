@@ -1,6 +1,6 @@
-import gsap, { Power4 } from "gsap";
-import OverviewBlocks from "./helper/OverviewBlocks";
+import OverviewBlocks from "./helper/OverviewBlock";
 import TitleGSAP from "./helper/TitleGSAP";
+import gsap, { Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { onMount } from "solid-js";
 

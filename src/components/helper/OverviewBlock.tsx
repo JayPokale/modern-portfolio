@@ -1,6 +1,6 @@
 import { For, createEffect } from "solid-js";
 import { overviewSkills } from "~/constants";
-import "./OverviewBlocks.css";
+import "./OverviewBlock.css";
 
 const OverviewBlocks = () => {
   let card: HTMLElement;
@@ -68,7 +68,7 @@ function createBlock({ title, content, color1, color2 }: overviewSkillBlock) {
           <h2
             class={`text-2xl my-4 text-center font-semibold text-transparent bg-clip-text`}
             style={{
-              "background-image": `linear-gradient(to right,  #${color1} 0%, #${color2} 100%)`,
+              "background-image": `linear-gradient(to right,  ${color1} 0%, ${color2} 100%)`,
             }}
           >
             {title}
