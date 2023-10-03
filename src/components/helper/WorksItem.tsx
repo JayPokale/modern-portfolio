@@ -15,19 +15,19 @@ type work = {
 const WorksItems = ({ item }: work) => {
   const { title, content, tech, url, curColor, nextColor } = item;
 
-  let radialShadow!: HTMLDivElement;
+  let navigatorCircle!: HTMLDivElement;
   let navigatorPath!: HTMLDivElement;
   let workTitle!: HTMLDivElement;
   let workContent!: HTMLDivElement;
 
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
-    gsap.to(radialShadow, {
+    gsap.to(navigatorCircle, {
       opacity: 1,
       duration: 2,
       ease: Back.easeOut,
       scrollTrigger: {
-        trigger: radialShadow,
+        trigger: navigatorCircle,
         start: "top 70%",
         toggleActions: "play none none reverse",
       },
@@ -38,7 +38,7 @@ const WorksItems = ({ item }: work) => {
       duration: 3,
       ease: Power3.easeInOut,
       scrollTrigger: {
-        trigger: radialShadow,
+        trigger: navigatorCircle,
         start: "top 60%",
         toggleActions: "play none none reverse",
       },
@@ -73,7 +73,7 @@ const WorksItems = ({ item }: work) => {
     <section class="relative px-4 w-full max-w-xl mx-auto">
       <div class="absolute h-full">
         <div
-          ref={radialShadow}
+          ref={navigatorCircle}
           class="h-5 w-5 rounded-full opacity-0"
           style={{
             background: `${curColor}`,

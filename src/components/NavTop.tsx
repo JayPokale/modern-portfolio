@@ -8,7 +8,7 @@ import {
 
 const NavTop = () => {
   return (
-    <main class="w-full select-none sticky top-0 py-2 z-50">
+    <main class="w-screen select-none fixed top-0 left-0 py-2 z-50">
       <div
         class="absolute top-0 h-16 w-full"
         style={{
