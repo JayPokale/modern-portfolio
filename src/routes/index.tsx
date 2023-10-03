@@ -11,7 +11,7 @@ const Home = () => {
       <Overview />
       <Skills />
       <ProfessionalSkills />
-      <Works />
+      {/* <Works /> */}
       {/* <div class="h-[200vh]"></div> */}
     </>
   );
