@@ -18,6 +18,8 @@ const TitleGSAP = ({ id, title }: props) => {
       ease: Expo.easeOut,
       scrollTrigger: {
         trigger: `#${id}`,
+        start: "top 80%",
+        toggleActions: "play reverse play reverse",
       },
     });
   });

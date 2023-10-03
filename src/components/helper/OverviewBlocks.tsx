@@ -3,6 +3,8 @@ import { overviewSkills } from "~/constants";
 import "./OverviewBlocks.css";
 
 const OverviewBlocks = () => {
+  let card: HTMLElement;
+
   createEffect(() => {
     var cardOuters = document.getElementsByClassName(
       "card-outer"
@@ -10,7 +12,6 @@ const OverviewBlocks = () => {
     var cardInners = document.getElementsByClassName(
       "card-inner"
     ) as HTMLCollectionOf<HTMLDivElement>;
-    var card = document.getElementById("cards");
 
     for (const card of cardInners) {
       card.onmousemove = (e) => {
@@ -43,7 +44,7 @@ const OverviewBlocks = () => {
 
   return (
     <section
-      id="cards"
+      ref={card!}
       class="max-w-2xl mx-auto pt-8 grid grid-rows-4 sm:grid-rows-2 sm:grid-cols-2 gap-1"
     >
       <For each={overviewSkills}>{(skill) => createBlock(skill)}</For>
@@ -60,7 +61,7 @@ type overviewSkillBlock = {
 
 function createBlock({ title, content, color1, color2 }: overviewSkillBlock) {
   return (
-    <section class="relative mx-auto flex p-px min-h-[240px] max-w-sm">
+    <section class="overview-block relative mx-auto flex p-px min-h-[240px] max-w-sm opacity-0 scale-75">
       <div class="card-outer absolute inset-0 w-full h-full rounded-md" />
       <div class="card-inner relative w-full h-full rounded-md bg-[#121623] z-10 before:w-full before:h-full before:absolute before:duration-500 before:ease-in-out before:opacity-0 before:hover:opacity-100">
         <div class="w-3/4 mx-auto py-4">
