@@ -1,6 +1,10 @@
 import { For } from "solid-js";
 
-const SkillHexagon = ({ skill }: { skill: string }) => {
+type props = {
+  skill: string;
+};
+
+const SkillHexagon = ({ skill }: props) => {
   const sidesRotations = [
     [0, 0],
     [60, 0],

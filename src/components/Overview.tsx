@@ -6,7 +6,6 @@ import { onMount } from "solid-js";
 
 const Overview = () => {
   gsap.registerPlugin(ScrollTrigger);
-
   onMount(() => {
     gsap.to("#overview-content", {
       y: 0,

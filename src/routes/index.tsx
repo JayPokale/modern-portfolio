@@ -1,3 +1,4 @@
+import Contact from "~/components/Contact";
 import HeroSection from "~/components/HeroSection";
 import Overview from "~/components/Overview";
 import ProfessionalSkills from "~/components/ProfessionalSkills";
@@ -12,7 +13,7 @@ const Home = () => {
       <Skills />
       <ProfessionalSkills />
       <Works />
-      {/* <div class="h-[200vh]"></div> */}
+      <Contact />
     </>
   );
 };

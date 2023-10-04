@@ -77,6 +77,15 @@ export const professionalSkills = [
 
 export const works = [
   {
+    title: "Modern Portfolio (This Website)",
+    content:
+      "I've crafted a captivating portfolio using Solid.js and SolidStart, taking advantage of their efficient reactivity and component-based structure. To elevate the user experience, I've seamlessly integrated animations through GSAP (GreenSock Animation Platform). These animations breathe life into my portfolio, enhancing its visual appeal and interactivity. Whether it's subtle fades, smooth transitions, or dynamic effects, GSAP empowers me to deliver an engaging and memorable presentation of my work. This combination of Solid.js, SolidStart, and GSAP showcases my skills in modern web development and animation, creating a compelling showcase for my projects and expertise. (Tip: Click on below URL to know about recursion)",
+    tech: "Solidjs, SolidStart, Nodejs, GSAP",
+    url: "https://jaypokale.vercel.app",
+    curColor: "#8f60f8",
+    nextColor: "#1fa2ff",
+  },
+  {
     title: "Multi User Blogging Website",
     content:
       "I've developed a user-friendly blogging platform, enabling effortless article uploads by any user. What sets it apart is its seamless integration with Google, ensuring that every submitted article gets published and indexed on the search giant's platform. This innovative approach opens up a vast audience for writers, enhancing their reach and impact. Whether you're a seasoned blogger or a novice writer, our platform empowers you to share your insights and creativity with the world, all with the simplicity of a few clicks. Join us today and let your words shine on the global stage through our Google-connected blogging website.",
