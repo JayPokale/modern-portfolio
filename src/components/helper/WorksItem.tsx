@@ -1,4 +1,4 @@
-import gsap, { Back, Expo, Power3 } from "gsap";
+import gsap, { Back, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { onMount } from "solid-js";
 
@@ -35,8 +35,8 @@ const WorksItems = ({ item }: work) => {
 
     gsap.to(navigatorPath, {
       height: "100%",
-      duration: 3,
-      ease: Power3.easeInOut,
+      duration: 1,
+      ease: Power1.easeInOut,
       scrollTrigger: {
         trigger: navigatorCircle,
         start: "top 60%",
@@ -72,14 +72,16 @@ const WorksItems = ({ item }: work) => {
   return (
     <section class="relative px-4 w-full max-w-xl mx-auto">
       <div class="absolute h-full">
-        <div
-          ref={navigatorCircle}
-          class="h-5 w-5 rounded-full opacity-0"
-          style={{
-            background: `${curColor}`,
-            "box-shadow": `0px 0px 30px 5px ${curColor}`,
-          }}
-        />
+        <div class="h-5 w-5 grid place-items-center">
+          <div
+            ref={navigatorCircle}
+            class="h-1/2 w-1/2 rounded-full opacity-0"
+            style={{
+              background: `${curColor}`,
+              "box-shadow": `0px 0px 30px 5px ${curColor}`,
+            }}
+          />
+        </div>
         <div
           ref={navigatorPath}
           class="mx-auto w-0.5 mt-2"
@@ -111,7 +113,7 @@ const WorksItems = ({ item }: work) => {
             <span class="font-semibold" style={{ color: `${curColor}` }}>
               URL:
             </span>{" "}
-            <a href={url} class="text-heading">
+            <a href={url} class="bg-heading px-2 py-0.5 rounded-md">
               {url}
             </a>
           </p>

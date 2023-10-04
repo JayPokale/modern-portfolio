@@ -18,6 +18,8 @@ body {
   flex-direction: column;
   gap: 4rem;
   font-family: "Inter", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
