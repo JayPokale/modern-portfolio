@@ -1,7 +1,7 @@
 import TitleGSAP from "./helper/TitleGSAP";
 import gsap, { Power4 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { onMount } from "solid-js";
+import { createEffect, onMount } from "solid-js";
 import nodemailer from "nodemailer";
 import { createServerAction$ } from "solid-start/server";
 
@@ -15,29 +15,45 @@ const Contact = () => {
       const subject = formData.get("subject") as string;
       const message = formData.get("message") as string;
 
-      return new Promise((resolve, reject) => {
-        var transporter = nodemailer.createTransport({
-          host: "smtp.gmail.com",
-          port: 465,
-          auth: {
-            user: import.meta.env.VITE_NODEMAILER_USER,
-            pass: import.meta.env.VITE_NODEMAILER_PASS,
-          },
-        });
+      let res = "Some error occured";
 
-        var mailOptions = {
-          from: `${name} <${email}> ${email}`,
-          to: "jay.pokale.35@gmail.com",
-          subject: subject,
-          text: message,
-        };
+      await new Promise((resolve, reject) => {
+        try {
+          var transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 465,
+            auth: {
+              user: import.meta.env.VITE_NODEMAILER_USER,
+              pass: import.meta.env.VITE_NODEMAILER_PASS,
+            },
+          });
 
-        transporter.sendMail(mailOptions, (error) => {
-          resolve(!!error);
-        });
+          var mailOptions = {
+            from: `${name} <${email}> ${email}`,
+            to: "jay.pokale.35@gmail.com",
+            subject: subject,
+            text: message,
+          };
+
+          transporter.sendMail(mailOptions, (error) => {
+            if (!error) res = "Mail Sent";
+            resolve(!!error);
+          });
+        } catch {
+          reject();
+        }
       });
+
+      return res;
     }
   );
+
+  createEffect(() => {
+    if (sending.result) {
+      contactForm.reset();
+      alert(sending.result);
+    }
+  });
 
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
