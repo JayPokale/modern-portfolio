@@ -32,7 +32,7 @@ const TitleGSAP = ({ title }: props) => {
         style={{ transform: "translateY(-100%)", opacity: 0 }}
       >
         <span class="px-1">{title}</span>
-        <span class="absolute left-0 -bottom-0 w-full h-0 transition-all -z-10 group-hover:h-full bg-heading rounded-md"></span>
+        <span class="absolute left-0 -bottom-0 w-full h-0 transition-all -z-10 group-hover:h-full bg-heading rounded-md" />
       </h1>
     </div>
   );
