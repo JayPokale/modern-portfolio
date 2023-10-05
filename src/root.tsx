@@ -5,6 +5,7 @@ import {
   FileRoutes,
   Head,
   Html,
+  Link,
   Meta,
   Routes,
   Scripts,
@@ -20,6 +21,7 @@ export default function Root() {
         <Title>Jay Pokale</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Link rel="shortcut icon" href="favicon.png"></Link>
       </Head>
       <Body class="max-w-7xl mx-auto">
         <Suspense>
