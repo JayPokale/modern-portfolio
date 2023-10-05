@@ -6,13 +6,15 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ProfessionalSkillBlock from "./helper/ProfessionalSkillBlock";
 
 const ProfessionalSkills = () => {
+  let skillsBlock!: HTMLDivElement;
+
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
-    gsap.to("#professional-skills", {
+    gsap.to(skillsBlock, {
       opacity: 1,
       duration: 1,
       scrollTrigger: {
-        trigger: "#professional-skills",
+        trigger: skillsBlock,
         start: "top 70%",
         toggleActions: "play reverse play reverse",
       },
@@ -21,9 +23,9 @@ const ProfessionalSkills = () => {
 
   return (
     <main class="min-h-[calc(min(100vh,100vw))]">
-      <TitleGSAP id="professional" title="Professional Skills" />
+      <TitleGSAP title="Professional Skills" />
       <div
-        id="professional-skills"
+        ref={skillsBlock}
         class="max-w-4xl w-full overflow-hidden mx-auto flex flex-wrap justify-center gap-4 py-8 opacity-0"
       >
         <style>{`#shadow:hover {box-shadow: 0 0 15px #8f60f8}`}</style>

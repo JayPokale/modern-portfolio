@@ -19,7 +19,7 @@ const ImageTransition = () => {
   });
 
   return (
-    <section class="sticky top-1/4">
+    <section class="sticky top-1/4 hover:scale-105 duration-200 ease-in-out">
       <div id="jayImg" class="absolute z-10 overflow-hidden">
         <img src="Jay.png" class="w-3/4 mx-auto" alt="Jay Normal" />
       </div>

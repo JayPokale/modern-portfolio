@@ -6,6 +6,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Skills = () => {
+  let skillsBlock!: HTMLDivElement;
+
   onMount(() => {
     const hexagons = document.getElementsByClassName(
       "skill-hexagon"
@@ -31,11 +33,11 @@ const Skills = () => {
 
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
-    gsap.to("#skill-hexagons", {
+    gsap.to(skillsBlock, {
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: "#skill-hexagons",
+        trigger: skillsBlock,
         start: "top 70%",
         toggleActions: "play reverse play reverse",
       },
@@ -44,9 +46,9 @@ const Skills = () => {
 
   return (
     <main class="min-h-[calc(min(100vh,100vw))]">
-      <TitleGSAP id="skills" title="Skills (Tech Stack)" />
+      <TitleGSAP title="Skills (Tech Stack)" />
       <div
-        id="skill-hexagons"
+        ref={skillsBlock}
         class="max-w-5xl mx-auto py-16 flex flex-wrap justify-center gap-4 overflow-hidden opacity-0"
       >
         <For each={skills}>{(skill) => <SkillHexagon skill={skill} />}</For>
