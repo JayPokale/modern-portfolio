@@ -24,7 +24,7 @@ const WorksItems = ({ item }: work) => {
   onMount(() => {
     gsap.to(navigatorCircle, {
       opacity: 1,
-      duration: 2,
+      duration: 0.5,
       ease: Back.easeOut,
       scrollTrigger: {
         trigger: navigatorCircle,
