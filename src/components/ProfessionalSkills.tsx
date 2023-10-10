@@ -28,7 +28,7 @@ const ProfessionalSkills = () => {
         ref={skillsBlock}
         class="max-w-4xl w-full overflow-hidden mx-auto flex flex-wrap justify-center gap-4 py-8 opacity-0"
       >
-        <style>{`#shadow:hover {box-shadow: 0 0 15px #8f60f8}`}</style>
+        <style>{`#shadow:hover {box-shadow: 0 0 15px rgb(var(--color-primary))}`}</style>
         <For each={professionalSkills}>
           {(skillItem) => <ProfessionalSkillBlock skillItem={skillItem} />}
         </For>

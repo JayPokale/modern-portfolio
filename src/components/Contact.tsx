@@ -5,6 +5,33 @@ import { createEffect, onMount } from "solid-js";
 import nodemailer from "nodemailer";
 import { createServerAction$ } from "solid-start/server";
 
+type inputProps = {
+  text: string;
+  name: string;
+  placeholder: string;
+};
+
+const inputClass =
+  "shadow-sm text-sm rounded-lg outline-none w-full p-2.5 bg-secondary/5 border-2 border-transparent focus:border-primary";
+
+const Input = ({ text, name, placeholder }: inputProps) => {
+  return (
+    <div>
+      <label for={name} class="mb-2 block text-sm font-medium">
+        {text}
+      </label>
+      <input
+        type="text"
+        id={name}
+        name={name}
+        class={inputClass}
+        placeholder={placeholder}
+        required
+      />
+    </div>
+  );
+};
+
 const Contact = () => {
   let contactForm!: HTMLFormElement;
 
@@ -78,45 +105,13 @@ const Contact = () => {
           action="#"
           class="space-y-8 py-8 lg:py-16 px-4 mx-auto w-full max-w-screen-sm opacity-0"
         >
-          <div>
-            <label for="name" class="mb-2 block text-sm font-medium">
-              Your name
-            </label>
-            <input
-              type="name"
-              id="name"
-              name="name"
-              class="shadow-sm text-sm rounded-lg outline-none w-full p-2.5 bg-white/5 border-2 border-transparent focus:border-heading"
-              placeholder="Binod"
-              required
-            />
-          </div>
-          <div>
-            <label for="email" class="mb-2 block text-sm font-medium">
-              Your email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="shadow-sm text-sm rounded-lg outline-none w-full p-2.5 bg-white/5 border-2 border-transparent focus:border-heading"
-              placeholder="name@email.com"
-              required
-            />
-          </div>
-          <div>
-            <label for="subject" class="mb-2 block text-sm font-medium">
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              class="shadow-sm text-sm rounded-lg outline-none w-full p-2.5 bg-white/5 border-2 border-transparent focus:border-heading"
-              placeholder="Let us know how I can help you"
-              required
-            />
-          </div>
+          <Input text="Your Name" name="name" placeholder="Binod" />
+          <Input text="Your Email" name="email" placeholder="name@email.com" />
+          <Input
+            text="Subject"
+            name="subject"
+            placeholder="Let us know how I can help you"
+          />
           <div class="sm:col-span-2">
             <label for="message" class="mb-2 block text-sm font-medium">
               Your message
@@ -125,18 +120,17 @@ const Contact = () => {
               id="message"
               name="message"
               rows="6"
-              class="shadow-sm text-sm rounded-lg outline-none w-full p-2.5 bg-white/5 border-2 border-transparent focus:border-heading"
+              class={inputClass}
               placeholder="Leave a comment..."
               required
             />
           </div>
-          <button
+          <input
             type="submit"
-            class="py-2 px-4 text-sm rounded-lg bg-heading hover:bg-transparent border-2 border-heading outline-none disabled:bg-transparent disabled:cursor-wait"
+            class="py-2 px-4 text-sm rounded-lg bg-primary text-mode hover:text-primary hover:bg-transparent border-2 border-primary outline-none disabled:bg-transparent disabled:cursor-wait"
             disabled={sending.pending}
-          >
-            {sending.pending ? "Sending..." : "Send message"}
-          </button>
+            value={sending.pending ? "Sending..." : "Send message"}
+          />
         </Form>
       </div>
     </main>

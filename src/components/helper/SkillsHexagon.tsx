@@ -28,9 +28,9 @@ const SkillHexagon = ({ skill }: props) => {
           transform: "translateX(51px) translateY(33px) translateZ(45px)",
         }}
       >
-        <div class="absolute w-[48px] h-[84px] rotate-[60deg] bg-primary" />
-        <div class="absolute w-[48px] h-[84px] rotate-[120deg] bg-primary" />
-        <div class="absolute grid place-items-center w-[48px] h-[84px] bg-primary">
+        <div class="absolute w-[48px] h-[84px] rotate-[60deg] bg-mode" />
+        <div class="absolute w-[48px] h-[84px] rotate-[120deg] bg-mode" />
+        <div class="absolute grid place-items-center w-[48px] h-[84px] bg-mode">
           <img
             src={"skills/" + skill + ".png"}
             alt={skill + " logo"}
@@ -60,9 +60,9 @@ function HexagonSide(x: number, z: number) {
       class="absolute w-[84px] h-[48px]"
       style={{
         transform: `rotateZ(${z}deg) rotateY(-90deg) rotateX(${x}deg) translateZ(42px)`,
-        "box-shadow": "0 0 10px #050917 inset",
+        "box-shadow": "0 0 10px rgb(var(--color-mode)) inset",
         "background-image":
-          "linear-gradient(-90deg, rgba(143,96,248,0.5) 0%, rgba(0,0,0,0) 50%)",
+          "linear-gradient(-90deg, rgb(var(--color-primary) / 0.5) 0%, transparent 50%)",
       }}
     />
   );

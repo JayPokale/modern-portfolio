@@ -1,4 +1,4 @@
-import { Suspense } from "solid-js";
+import { Suspense, createEffect, createSignal } from "solid-js";
 import {
   Body,
   ErrorBoundary,
@@ -16,7 +16,7 @@ import NavTop from "./components/NavTop";
 
 export default function Root() {
   return (
-    <Html lang="en">
+    <Html lang="en" data-mode="dim">
       <Head>
         <Title>Jay Pokale</Title>
         <Meta charset="utf-8" />

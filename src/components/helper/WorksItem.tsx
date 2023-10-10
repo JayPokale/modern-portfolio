@@ -113,7 +113,7 @@ const WorksItems = ({ item }: work) => {
             <span class="font-semibold" style={{ color: `${curColor}` }}>
               URL:
             </span>{" "}
-            <a href={url} class="bg-heading px-2 py-0.5 rounded-md">
+            <a href={url} class="underline underline-offset-4">
               {url}
             </a>
           </p>

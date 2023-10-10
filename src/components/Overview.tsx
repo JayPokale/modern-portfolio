@@ -6,7 +6,6 @@ import { onMount } from "solid-js";
 
 const Overview = () => {
   let overviewContent!: HTMLDivElement;
-  let overviewPath!: HTMLDivElement;
 
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
@@ -17,17 +16,6 @@ const Overview = () => {
       ease: Power4.easeOut,
       scrollTrigger: {
         trigger: overviewContent,
-        start: "top 70%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-
-    gsap.to(overviewPath, {
-      height: "16rem",
-      duration: 3,
-      ease: Back.easeOut,
-      scrollTrigger: {
-        trigger: overviewPath,
         start: "top 70%",
         toggleActions: "play reverse play reverse",
       },
@@ -51,20 +39,13 @@ const Overview = () => {
     <main class="min-h-[calc(min(100vh,100vw))] flex flex-col lg:flex-row">
       <div class="w-full lg:w-1/2">
         <TitleGSAP title="Overview" />
-        <div
-          ref={overviewContent}
-          class="flex gap-8 px-8 opacity-0 -translate-y-5"
-        >
-          <div
-            ref={overviewPath}
-            class="h-0 w-1 -translate-y-0.5 bg-gradient-to-b rounded-t-full from-white"
-          />
+        <div ref={overviewContent} class="px-8 opacity-0 -translate-y-5">
           <p class="w-3/4 text-xl text-justify">
             I am a skilled full stack software developer and competitive
             programmer with experience in
-            <span class="font-semibold text-heading"> TypeScript</span>,
-            <span class="font-semibold text-heading"> JavaScript </span>
-            and <span class="font-semibold text-heading">Python</span> with
+            <span class="font-semibold text-primary"> TypeScript</span>,
+            <span class="font-semibold text-primary"> JavaScript </span>
+            and <span class="font-semibold text-primary">Python</span> with
             experties in frameworks like React, Solid and ThreeJS. I am a quick
             learner and colaborate closely with clients to create efficient,
             scalable and user-friendly solutions that solve real world problems.

@@ -9,7 +9,7 @@ const ProfessionalSkillBlock = ({ skillItem }: props) => {
   return (
     <div
       id="shadow"
-      class="w-64 h-64 relative rounded-md bg-white/5 text-white/50 duration-1000 ease-in-out border-2 border-transparent hover:bg-transparent hover:text-heading hover:opacity-100 hover:duration-200 hover:border-heading"
+      class="w-64 h-64 relative rounded-md bg-secondary/5 text-secondary/50 duration-1000 ease-in-out border-2 border-transparent hover:bg-transparent hover:text-primary hover:opacity-100 hover:duration-200 hover:border-primary"
       onMouseEnter={() => (child.style.transitionDuration = "200ms")}
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();
