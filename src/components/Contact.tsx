@@ -127,7 +127,7 @@ const Contact = () => {
           </div>
           <input
             type="submit"
-            class="py-2 px-4 text-sm rounded-lg bg-primary text-secondary hover:text-primary hover:bg-transparent border-2 border-primary outline-none disabled:bg-transparent disabled:cursor-wait"
+            class="py-2 px-4 text-sm rounded-lg bg-primary text-white hover:text-primary hover:bg-transparent border-2 border-primary outline-none disabled:bg-transparent disabled:cursor-wait"
             disabled={sending.pending}
             value={sending.pending ? "Sending..." : "Send message"}
           />
