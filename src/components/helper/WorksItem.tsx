@@ -84,7 +84,7 @@ const WorksItems = ({ item }: work) => {
         </div>
         <div
           ref={navigatorPath}
-          class="mx-auto w-0.5 mt-2"
+          class="mx-auto w-0.5 mt-2 rounded-sm"
           style={{
             "background-image": `linear-gradient(to bottom,  ${curColor} 0%, ${nextColor} 100%)`,
           }}
