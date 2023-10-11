@@ -1,4 +1,5 @@
 import { onMount } from "solid-js";
+import { colorMode } from "../NavTop";
 
 const ImageTransition = () => {
   onMount(() => {
@@ -24,7 +25,11 @@ const ImageTransition = () => {
         <img src="Jay.png" class="w-3/4 mx-auto" alt="Jay Normal" />
       </div>
       <div>
-        <img src="Jay2.png" class="invert w-3/4 mx-auto" alt="Jay B&W" />
+        <img
+          src="Jay2.png"
+          class={`w-3/4 mx-auto ${colorMode() ? "invert" : ""}`}
+          alt="Jay B&W"
+        />
       </div>
     </section>
   );

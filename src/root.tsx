@@ -16,7 +16,14 @@ import NavTop from "./components/NavTop";
 
 export default function Root() {
   return (
-    <Html lang="en" data-mode="dim">
+    <Html
+      lang="en"
+      style={{
+        "--color-mode": "25 25 25",
+        "--color-primary": "255 8 8",
+        "--color-secondary": "255 255 255",
+      }}
+    >
       <Head>
         <Title>Jay Pokale</Title>
         <Meta charset="utf-8" />

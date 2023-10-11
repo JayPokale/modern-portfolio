@@ -4,29 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root[data-mode="dark"] {
-    --color-mode: 0 0 0;
-    --color-primary: 143 96 248;
-    --color-secondary: 255 255 255;
-  }
-
-  :root[data-mode="dim"] {
-    --color-mode: 8 15 38;
-    --color-primary: 143 96 248;
-    --color-secondary: 255 255 255;
-  }
-
-  :root[data-mode="light"] {
-    --color-mode: 255 255 255;
-    --color-primary: 158 116 252;
-    --color-secondary: 50 50 50;
-  }
-}
-
 * {
-  transition-duration: 50ms;
-  transition-timing-function: ease-in-out;
   scroll-behavior: smooth;
 }
 

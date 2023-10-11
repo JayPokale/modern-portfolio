@@ -8,6 +8,9 @@ export default {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-secondary) / <alpha-value>)",
       },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
     },
   },
   plugins: [],
