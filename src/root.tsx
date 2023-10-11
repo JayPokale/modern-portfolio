@@ -20,7 +20,7 @@ export default function Root() {
       lang="en"
       style={{
         "--color-mode": "25 25 25",
-        "--color-primary": "255 8 8",
+        "--color-primary": "143 96 248",
         "--color-secondary": "255 255 255",
       }}
     >
