@@ -22,12 +22,16 @@ const ImageTransition = () => {
   return (
     <section class="sticky top-1/4 hover:scale-105 duration-200 ease-in-out">
       <div id="jayImg" class="absolute overflow-hidden">
-        <img src="Jay.png" class="w-3/4 mx-auto opacity-40" alt="Jay Normal" />
+        <img
+          src="JayMask.png"
+          class={`w-3/4 mx-auto opacity-40 ${colorMode() ? "" : "invert"}`}
+          alt="Jay Normal"
+        />
       </div>
       <div>
         <img
-          src="Jay2.png"
-          class={`w-3/4 mx-auto ${colorMode() ? "invert opacity-80" : ""}`}
+          src="JaySketch.png"
+          class={`w-3/4 mx-auto ${colorMode() ? "" : "invert"}`}
           alt="Jay B&W"
         />
       </div>

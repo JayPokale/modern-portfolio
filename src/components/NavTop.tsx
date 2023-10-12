@@ -7,7 +7,7 @@ import {
 } from "solid-icons/fa";
 import { For, createEffect, createSignal } from "solid-js";
 
-export const [colorMode, setColorMode] = createSignal(1);
+export const [colorMode, setColorMode] = createSignal(0);
 const colorThemes = [
   "255 8 8",
   "240 120 22",
