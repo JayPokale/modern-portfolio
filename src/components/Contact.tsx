@@ -105,7 +105,7 @@ const Contact = () => {
           action="#"
           class="space-y-8 py-8 lg:py-16 px-4 mx-auto w-full max-w-screen-sm opacity-0"
         >
-          <Input text="Your Name" name="name" placeholder="Binod" />
+          <Input text="Your Name" name="name" placeholder="Name" />
           <Input text="Your Email" name="email" placeholder="name@email.com" />
           <Input
             text="Subject"

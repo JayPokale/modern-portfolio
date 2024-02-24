@@ -14,7 +14,7 @@ export const overviewSkills = [
   {
     title: "Backend Developer",
     content:
-      "Mostly work with Node with Express or full stack framework. Also worked with Django.",
+      "Works with Node with Express, Golang with GoFiber and Python with Django & Flask",
     color1: "#ff5f6d",
     color2: "#ffc371",
   },
@@ -33,6 +33,7 @@ export const skills = [
   "javascript",
   "typescript",
   "python",
+  "golang",
   "react",
   "next",
   "solid",
@@ -41,7 +42,6 @@ export const skills = [
   "tailwind",
   "node",
   "nest",
-  "django",
   "mongodb",
   "mysql",
   "git",
@@ -77,13 +77,20 @@ export const professionalSkills = [
 
 export const works = [
   {
-    title: "Modern Portfolio (This Website)",
+    title: "NPM Package for Dynamic Typed Array",
     content:
-      "I've crafted a captivating portfolio using Solid.js and SolidStart, taking advantage of their efficient reactivity and component-based structure. To elevate the user experience, I've seamlessly integrated animations through GSAP (GreenSock Animation Platform). These animations breathe life into my portfolio, enhancing its visual appeal and interactivity. Whether it's subtle fades, smooth transitions, or dynamic effects, GSAP empowers me to deliver an engaging and memorable presentation of my work. This combination of Solid.js, SolidStart, and GSAP showcases my skills in modern web development and animation, creating a compelling showcase for my projects and expertise. (Tip: Click on below URL to know about recursion)",
-    tech: "Solidjs, SolidStart, Nodejs, GSAP",
-    url: "https://jaypokale.vercel.app",
+      "The Typed-NumArray JavaScript package offers fast and efficient numeric array operations. Users can install it via npm, yarn, pnpm, or bun. Supporting various numeric types like int8, uint16, float32, etc., it optimizes sorting and memory usage. Users can create arrays, access elements, perform basic operations like push, pop, sort, and utilize standard array methods. The package encourages optimization techniques like using sort() for enhanced performance and reduceMemory() to free up space. The array can be manipulated using methods such as reverse, fill, find, filter, map, and more. A versatile tool for numeric array handling in JavaScript.",
+    tech: "JavaScript, NodeJS, NPM",
+    url: "https://www.npmjs.com/package/typed-numarray",
     curColor: "#8f60f8",
-    nextColor: "#1fa2ff",
+  },
+  {
+    title: "Ballerina Open Source Contribution",
+    content:
+      "I contributed to the Ballerina open source project by refactoring ReactJS code in alignment with industry standards. Implementing best practices, I enhanced the codebase to improve maintainability, readability, and overall code quality. Adhering to Ballerina's coding conventions and design principles, the refactoring aimed to optimize performance and ensure a more consistent and scalable ReactJS application. This contribution not only reflects my commitment to open source collaboration but also aligns the ReactJS codebase with industry-approved standards, fostering a more robust and developer-friendly environment within the Ballerina project.",
+    tech: "JavaScript, ReactJS",
+    url: "https://github.com/orgs/ballerina-platform/projects/362",
+    curColor: "#1fa2ff",
   },
   {
     title: "Multi User Blogging Website",
@@ -91,17 +98,15 @@ export const works = [
       "I've developed a user-friendly blogging platform, enabling effortless article uploads by any user. What sets it apart is its seamless integration with Google, ensuring that every submitted article gets published and indexed on the search giant's platform. This innovative approach opens up a vast audience for writers, enhancing their reach and impact. Whether you're a seasoned blogger or a novice writer, our platform empowers you to share your insights and creativity with the world, all with the simplicity of a few clicks. Join us today and let your words shine on the global stage through our Google-connected blogging website.",
     tech: "Solidjs, SolidStart, Nodejs, tRPC, MongoDB",
     url: "https://authorslog.vercel.app",
-    curColor: "#1fa2ff",
-    nextColor: "#6dd5ed",
+    curColor: "#6dd5ed",
   },
   {
-    title: "Blogging Website for Dare2Solve",
+    title: "Dare2Solve Solutions Website",
     content:
       "I've developed a dedicated blogging website under the banner of Dare2Solve, where I share comprehensive solutions for math-related challenges. This platform complements my thriving social media presence on Dare2Solve, which boasts a combined following of over 20,000 math enthusiasts. By offering detailed solutions on my website, I aim to provide my followers with a valuable resource for improving their math skills and tackling complex problems. This synergy between my social media presence and the blogging site not only reinforces my commitment to educational content but also fosters a supportive community of learners passionate about mathematics.",
     tech: "React, Nextjs, Nodejs, WP Rest API, WP Headless CMS",
     url: "https://dare2solve.vercel.app",
-    curColor: "#6dd5ed",
-    nextColor: "#7be495",
+    curColor: "#7be495",
   },
   {
     title: "NextJS Portfolio Website",
@@ -109,8 +114,7 @@ export const works = [
       "I've crafted an impressive portfolio using Next.js and Framer Motion. This dynamic combination of technologies brings my portfolio to life, offering a seamless and captivating user experience. Next.js provides lightning-fast performance and SEO benefits, ensuring my work is easily discoverable. Framer Motion, on the other hand, adds stunning animations and transitions, enhancing the visual appeal and interactivity of my portfolio. Whether you're exploring my projects or navigating through my site, the synergy between Next.js and Framer Motion creates a memorable and engaging showcase of my skills and creativity, leaving a lasting impression on visitors.",
     tech: "React, Nextjs, Nodejs, Framer-motion",
     url: "https://jaypokale-prev.vercel.app",
-    curColor: "#7be495",
-    nextColor: "#ffc837",
+    curColor: "#ffc837",
   },
   {
     title: "Facial Features Recognition",
@@ -118,17 +122,15 @@ export const works = [
       "I've developed an advanced facial features detection model that's capable of multifaceted analysis. This cutting-edge system excels in identifying faces with precision, offering not just recognition but also insightful demographic predictions. It can accurately estimate the subject's age, determine their gender, and even discern their race. This breakthrough technology has numerous applications, from enhancing security and surveillance to providing valuable insights in marketing and user experience optimization. With its ability to decode facial attributes, my model represents a significant stride in the field of computer vision, promising versatile and impactful solutions in various domains.",
     tech: "Python, Dlib, OpenCV, Face_recognition, Deepface",
     url: "https://github.com/JayPokale/FaceRecognition",
-    curColor: "#ffc837",
-    nextColor: "#ff8008",
+    curColor: "#ff8008",
   },
   {
-    title: "Dummy API Fetching Website",
+    title: "GoLang Auth Server",
     content:
-      "I've developed a React.js-based website that serves as a platform for fetching data from external APIs using the dummyapi. This project demonstrates the power of React in creating dynamic and interactive web applications. By integrating dummyapi, I've enabled users to make API requests and retrieve data seamlessly within the website's interface. This practical exercise not only showcases my proficiency in React but also highlights my ability to work with external data sources, an essential skill in modern web development. Whether it's for learning purposes or prototyping, this dummy API fetching website is a valuable tool for experimenting with data retrieval in a web context.",
-    tech: "React, RestAPI",
-    url: "https://mydummyapi.vercel.app",
-    curColor: "#ff8008",
-    nextColor: "#dd2476",
+      "I developed an authentication server in Golang utilizing the gofiber framework, implementing secured routes for enhanced security. Leveraging gofiber's lightweight and fast web framework, the authentication server ensures robust protection for sensitive routes. The server architecture is designed for efficient authentication processes, and the incorporation of protected routes adds an extra layer of authorization to the application. This Golang-based auth server, built on gofiber, not only provides a seamless and performant authentication experience but also reinforces the overall security of the web application by restricting access to designated routes.",
+    tech: "GoLang, GoFiber",
+    url: "https://github.com/JayPokale/golang-auth",
+    curColor: "#dd2476",
   },
   {
     title: "Sudoku Solver in JavaScript",
@@ -136,16 +138,14 @@ export const works = [
       "I've crafted a versatile Sudoku solver in JavaScript, implementing three distinct solving techniques: recursive, iterative, and depth-first search algorithms. This project offers a comprehensive approach to tackling Sudoku puzzles, catering to varying levels of complexity. The recursive method employs a backtracking strategy to find solutions, while the iterative approach iteratively refines possibilities until the puzzle is solved. The depth-first search algorithm delves into the puzzle's tree of possibilities systematically. This Sudoku solver not only showcases my programming prowess but also underscores my commitment to problem-solving and algorithmic thinking, making it a valuable resource for puzzle enthusiasts and coding learners alike.",
     tech: "JavaScript",
     url: "https://jaypokale-sudoku-solver.vercel.app",
-    curColor: "#dd2476",
-    nextColor: "#da22ff",
+    curColor: "#da22ff",
   },
   {
-    title: "Dijkstra & A-star Simulator",
+    title: "GitHub repo for competitive programmers in JavaScript",
     content:
-      "I've developed a JavaScript-based Dijkstra and A-star simulator, offering a hands-on exploration of these fundamental graph search algorithms. This interactive tool provides users with a dynamic platform to visualize and comprehend how Dijkstra's algorithm and the A-star heuristic search work in various scenarios. Whether you're a student studying algorithms or a developer seeking to understand these techniques, this simulator serves as an invaluable resource. By fostering a deeper understanding of graph traversal and pathfinding, it enhances problem-solving skills and equips users with the knowledge to tackle real-world optimization challenges effectively. Dive into the world of algorithmic exploration with this educational and engaging tool.",
-    tech: "JavaScript",
-    url: "https://jaypokale-path-finding.vercel.app",
-    curColor: "#da22ff",
-    nextColor: "transparent",
+      "I've created a comprehensive GitHub repository tailored for competitive programmers using JavaScript. This repository serves as a go-to resource, continually updated with essential data structures and algorithms crucial for competitive programming. Addressing the absence of a standard template library for JavaScript, I've meticulously crafted and documented each piece of code using jsDoc for enhanced clarity and ease of use. This initiative aims to empower competitive programmers with a reliable JavaScript resource, fostering efficiency and proficiency in algorithmic problem-solving. The repository encourages collaboration and provides a valuable toolset for programmers navigating the challenges of competitive coding.",
+    tech: "JavaScript, NodeJS, GitHub",
+    url: "https://github.com/JayPokale/competitive",
+    curColor: "#8f60f8",
   },
 ];

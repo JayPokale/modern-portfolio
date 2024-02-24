@@ -9,11 +9,10 @@ type work = {
     tech: string;
     url: string;
     curColor: string;
-    nextColor: string;
   };
 };
 const WorksItems = ({ item }: work) => {
-  const { title, content, tech, url, curColor, nextColor } = item;
+  const { title, content, tech, url, curColor } = item;
 
   let navigatorCircle!: HTMLDivElement;
   let navigatorPath!: HTMLDivElement;
@@ -86,7 +85,7 @@ const WorksItems = ({ item }: work) => {
           ref={navigatorPath}
           class="mx-auto w-0.5 mt-2 rounded-sm"
           style={{
-            "background-image": `linear-gradient(to bottom,  ${curColor} 0%, ${nextColor} 100%)`,
+            "background-image": `linear-gradient(to bottom, ${curColor} 0%, transparent 100%)`,
           }}
         />
       </div>
