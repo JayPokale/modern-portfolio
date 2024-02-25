@@ -44,7 +44,7 @@ const Overview = () => {
             I am a skilled full stack software developer and competitive
             programmer with experience in
             <span class="font-semibold text-primary"> TypeScript</span>,
-            <span class="font-semibold text-primary"> JavaScript </span>,
+            <span class="font-semibold text-primary"> JavaScript</span>,
             <span class="font-semibold text-primary"> Python </span>
             and <span class="font-semibold text-primary">GoLang</span> with
             experties in frameworks like React, Solid and ThreeJS. I am a quick
