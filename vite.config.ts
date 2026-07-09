@@ -1,7 +1,7 @@
-import solid from "solid-start/vite";
-import vercel from "solid-start-vercel";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({}) })],
+  plugins: [react(), tailwindcss()],
 });

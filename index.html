@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jay Pokale — engineer & researcher. Top 1% competitive programmer, builder of retrieval systems that cite their sources, founder of Dare2Solve."
+    />
+    <meta property="og:title" content="Jay Pokale — Problem J." />
+    <meta
+      property="og:description"
+      content="Given one engineer and a stream of unreasonable problems, output shipped systems. This site is the editorial."
+    />
+    <title>Jay Pokale — Problem J.</title>
+    <script>
+      try {
+        var t = localStorage.getItem("jp-theme");
+        if (t === "light") document.documentElement.dataset.theme = "light";
+        var a = localStorage.getItem("jp-accent");
+        if (a) document.documentElement.style.setProperty("--accent", a);
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

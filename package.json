@@ -1,33 +1,29 @@
 {
-  "name": "solid-front",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start"
-  },
+  "name": "jaypokale-portfolio",
+  "private": true,
   "type": "module",
-  "devDependencies": {
-    "@types/nodemailer": "^6.4.11",
-    "autoprefixer": "^10.4.14",
-    "esbuild": "^0.14.54",
-    "postcss": "^8.4.25",
-    "solid-start-node": "^0.2.19",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^4.9.4",
-    "vite": "^4.1.4"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.2",
-    "@solidjs/router": "^0.8.2",
-    "gsap": "^3.12.2",
-    "nodemailer": "^6.9.5",
-    "solid-icons": "^1.0.12",
-    "solid-js": "^1.7.2",
-    "solid-start": "^0.2.26",
-    "solid-start-vercel": "^0.2.29",
-    "undici": "^5.15.1"
+    "motion": "^12.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
   },
   "engines": {
-    "node": ">=16.8"
+    "node": ">=20"
   }
 }
