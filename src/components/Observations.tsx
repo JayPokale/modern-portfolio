@@ -1,3 +1,5 @@
+"use client";
+
 import { animate, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
 import { observations } from "../data";

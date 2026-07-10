@@ -8,7 +8,7 @@ Live: https://jaypokale.vercel.app
 
 ## Stack
 
-- Vite + React 19 + TypeScript
+- Next.js 16 (App Router, fully static-prerendered) + React 19 + TypeScript
 - Tailwind CSS v4
 - Motion (scroll reveals, counters, the verdict stamp)
 - three.js — interactive particle portrait in the hero
@@ -16,6 +16,8 @@ Live: https://jaypokale.vercel.app
 
 ## Features
 
+- SEO: prerendered HTML, Metadata API (OG/Twitter/canonical), JSON-LD Person
+  schema, `sitemap.xml`, `robots.txt`, and `llms.txt` for LLM crawlers
 - Theme system: dark/light "paper" plus any accent "ink" — six presets
   or a free color picker; persists in localStorage, no FOUC
 - Fully responsive; respects `prefers-reduced-motion`

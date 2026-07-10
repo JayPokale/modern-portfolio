@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { links } from "../data";
 import ParticlePortrait from "./ParticlePortrait";

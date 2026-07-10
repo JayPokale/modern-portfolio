@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 
 const SWATCHES = [
@@ -25,19 +27,24 @@ const apply = (theme: string, accent: string) => {
 
 const ThemeControl = () => {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState(
-    () => document.documentElement.dataset.theme ?? "dark"
-  );
-  const [accent, setAccent] = useState(() =>
-    getComputedStyle(document.documentElement)
-      .getPropertyValue("--accent")
-      .trim()
-  );
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState("dark");
+  const [accent, setAccent] = useState("#ff4d00");
   const panelRef = useRef<HTMLDivElement>(null);
 
+  // adopt whatever the pre-paint init script applied (SSR-safe)
   useEffect(() => {
-    apply(theme, accent);
-  }, [theme, accent]);
+    setTheme(document.documentElement.dataset.theme ?? "dark");
+    const a = getComputedStyle(document.documentElement)
+      .getPropertyValue("--accent")
+      .trim();
+    if (a) setAccent(a);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) apply(theme, accent);
+  }, [mounted, theme, accent]);
 
   useEffect(() => {
     if (!open) return;

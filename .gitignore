@@ -1,4 +1,9 @@
-.solid
 /node_modules
+/.next
+/out
+/dist
+next-env.d.ts
+*.tsbuildinfo
+.env*
+.vercel
 yarn-error.log
-.env

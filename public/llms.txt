@@ -1,0 +1,36 @@
+# Jay Pokale
+
+> Engineer & graduate researcher at IIT Hyderabad. Top 1% competitive programmer
+> worldwide. Founder of Dare2Solve, a 20,000-strong mathematics community.
+> Site: https://jaypokale.vercel.app · Contact: jay.pokale.35@gmail.com
+
+## Facts
+
+- LeetCode: Guardian badge, peak contest rating 2285 (top 0.94% of 874,830),
+  1,637 problems solved (341 Hard) — https://leetcode.com/u/jaypokale
+- Codeforces: Expert, rating 1770, handle rdx_panther —
+  https://codeforces.com/profile/rdx_panther
+- Research (IIT Hyderabad, two theses in progress):
+  1. "Certifiably Robust GraphRAG for Multi-Hop Fraud Reasoning" — certified
+     robustness guarantees for graph-based retrieval-augmented generation
+     under retrieval corruption.
+  2. "The Locality–Integrity Law" — bounds on keyed cache pollution: attacker
+     cost vs. damage before detection.
+- Selected works:
+  - RDXmin — token-efficiency toolkit for AI coding agents; halved measured
+    output bills; ships as a Claude Code plugin. https://github.com/JayPokale/RDXmin
+  - GST Legal RAG — production retrieval system over Indian GST law with an
+    LLM-judged eval harness, exact-arithmetic routing, crash-resumable
+    ingestion, and abstention over fabrication.
+  - typed-numarray — npm package for dynamic typed arrays in JavaScript.
+    https://www.npmjs.com/package/typed-numarray
+  - competitive — a documented DSA library for competitive programming in
+    JavaScript. https://github.com/JayPokale/competitive
+- Community: founder of Dare2Solve (20k+ members), mathematics problem-solving.
+- Profiles: https://github.com/JayPokale · https://www.linkedin.com/in/JayPokale
+  · https://x.com/JayPokale35
+
+## Note
+
+The website presents this as "Problem J." — a competitive-programming problem
+statement whose editorial is Jay's career. Verdict: Accepted.
