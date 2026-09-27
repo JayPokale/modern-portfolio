@@ -46,90 +46,92 @@ export const observations = [
   },
 ];
 
-export type Work = {
-  index: string;
-  title: string;
-  year: string;
-  description: string;
-  tech: string[];
-  href?: string;
-  badge?: string;
+/** The one with the stars. Count is fetched live; this is the fallback. */
+export const flagship = {
+  repo: "JayPokale/Chisle",
+  title: "Chisle",
+  stars: 564,
+  href: "https://github.com/JayPokale/Chisle",
+  site: "https://chisle.jaypokale.me",
+  pitch:
+    "Makes AI coding agents talk less, build less, and say more — like a senior dev who bills by the syllable. 44% of the output tokens, eleven agents, zero dependencies.",
+  roast:
+    "The only tool in its class that publishes the benchmarks it loses. Honesty: still not a growth strategy, somehow working anyway.",
 };
 
-export const works: Work[] = [
+export type Item = {
+  title: string;
+  note: string;
+  href?: string;
+  tag?: string;
+};
+
+export const ownRepos: Item[] = [
   {
-    index: "W1",
-    title: "RDXmin",
-    year: "2026",
-    description:
-      "A token-efficiency toolkit that makes AI coding agents talk less, build less, and say more — like a senior dev who bills by the syllable. Halved the output bill across 20 measured tasks, receipts committed to the repo. One command wires it into eight different agents; also ships as a Claude Code plugin. Turns out attention was not all you need — fewer tokens are. Yes, it edited its own portfolio entry to be shorter.",
-    tech: ["JavaScript", "Node", "Claude Code", "agent hooks"],
-    href: "https://github.com/JayPokale/RDXmin",
-    badge: "open source",
-  },
-  {
-    index: "W2",
-    title: "GST Legal RAG",
-    year: "2026",
-    description:
-      "A production-grade retrieval system over Indian GST law. Hybrid questions route the arithmetic to an exact calculator and the legal half to retrieval; an LLM-judged eval harness refuses to write a baseline when the judge tier is unhealthy; ingestion survives a crash at document 80,000 and resumes at 80,001. Low-confidence answers abstain rather than fabricate citations — a discipline some professionals bill hourly for.",
-    tech: ["Python", "RAG", "eval harness", "CI"],
-    href: "https://jaypokale.me",
-    badge: "in production",
-  },
-  {
-    index: "W3",
     title: "typed-numarray",
-    year: "2023",
-    description:
-      "An npm package for dynamic typed arrays in JavaScript — int8 through float64 with normal array ergonomics, faster sorts, and explicit memory control. Published, documented, and still quietly doing its job, which is more than can be said for most things published in 2023.",
-    tech: ["JavaScript", "npm"],
+    tag: "npm",
+    note: "Typed arrays with normal-array manners. Published 2023, still working — rarer than it should be.",
     href: "https://www.npmjs.com/package/typed-numarray",
-    badge: "npm",
   },
   {
-    index: "W4",
     title: "competitive",
-    year: "2023",
-    description:
-      "The standard template library JavaScript never shipped. Data structures and algorithms for competitive programming, each documented with JSDoc — built while climbing the ratings, maintained for everyone climbing behind. Doing competitive programming in JavaScript was a choice. I stand by it. My rating stands by it too.",
-    tech: ["JavaScript", "algorithms"],
+    tag: "JS",
+    note: "The STL JavaScript never shipped. Competitive programming in JS was a choice; my rating stands by it.",
     href: "https://github.com/JayPokale/competitive",
-    badge: "open source",
   },
 ];
 
-export const appendix = [
+export const upstream: Item[] = [
   {
-    title: "ProofMatch",
-    note: "N-way procurement match (PO ↔ GRN ↔ invoice ↔ spec) with rupee-level evidence — Kaya AI hackathon, IIT India 2026",
+    title: "Ballerina",
+    tag: "4 merged",
+    note: "Layout shifts killed, a 404'ing Windows certificate revived. My React, their standards, everyone survived.",
+    href: "https://github.com/pulls?q=is%3Apr+author%3AJayPokale+repo%3Aballerina-platform%2Fballerina-dev-website+is%3Amerged",
+  },
+  {
+    title: "token-harness leaderboard",
+    tag: "open",
+    note: "Entered Chisle into someone else's benchmark. Confidence is a dependency, and we have zero.",
+    href: "https://github.com/pi-infected/token-harness-optimizer-leaderboard/pull/1",
+  },
+  {
+    title: "Hacktoberfest ’22",
+    tag: "6 merged",
+    note: "Burger menus, overflow bugs, a digital clock. The motive was the T-shirt. The fixes were real.",
+  },
+];
+
+/** stdlib-js, p5.js, open-sauced, appwrite, ballerina-lang — closed, unmerged, character-building. */
+export const graveyard = ["stdlib-js", "p5.js", "open-sauced", "appwrite", "ballerina-lang"];
+
+export const projects: Item[] = [
+  {
+    title: "GST Legal RAG",
+    tag: "in production",
+    note: "Retrieval over Indian tax law that abstains instead of inventing citations. Several professionals bill hourly for the opposite.",
+    href: "https://jaypokale.me",
   },
   {
     title: "Case-law Knowledge Graph",
-    note: "scraper + citation graph over Indian tax judgments — feeds the GST RAG its case law",
+    tag: "private",
+    note: "Scraped every tax judgment it could find and made them cite each other. Feeds the RAG above.",
   },
   {
     title: "Forge",
-    note: "durable task-orchestration monorepo — Next.js, Cloudflare Workers, opinions",
-  },
-  {
-    title: "IITH Security Coursework",
-    note: "web CTF challenges & network-attack labs — legally sanctioned crime",
-  },
-  {
-    title: "AuthorsLog",
-    note: "multi-user blogging platform — built back when I said yes to everything",
-    href: "https://authorslog.vercel.app",
-  },
-  {
-    title: "Ballerina",
-    note: "OSS contribution — my React, their standards, everyone survived",
-    href: "https://github.com/orgs/ballerina-platform/projects/362",
+    tag: "private",
+    note: "Durable task orchestration on Next.js and Cloudflare Workers. Tasks survive crashes; I mostly do too.",
   },
   {
     title: "Office Management",
-    note: "web, backend, Android & iOS — one developer, four platforms, zero mercy",
+    tag: "4 platforms",
+    note: "Web, backend, Android, iOS. One developer, zero mercy.",
     href: "https://github.com/JayPokale/Office-management",
+  },
+  {
+    title: "AuthorsLog",
+    tag: "archive",
+    note: "Multi-user blogging platform, from the era when I said yes to everything.",
+    href: "https://authorslog.vercel.app",
   },
 ];
 

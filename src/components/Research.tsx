@@ -5,8 +5,8 @@ import Reveal from "./Reveal";
 const Research = () => (
   <section id="research" className="px-5 sm:px-10 lg:px-16 max-w-[1400px] mx-auto mt-32 sm:mt-48">
     <SectionHead
-      numeral="03"
-      kicker="§3 · Solution, part two"
+      numeral="04"
+      kicker="§4 · Solution, part three"
       title="Now, the lab."
       note="where I poison retrieval systems on purpose. for science. they signed a waiver. papers titled 'X is all you need' are read with suspicion."
     />

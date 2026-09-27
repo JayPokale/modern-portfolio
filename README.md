@@ -1,8 +1,8 @@
 # Jay Pokale — Problem J.
 
 Personal portfolio, framed as a competitive-programming problem and its editorial:
-the hero is the problem statement, stats are *Observations*, projects and research
-are the solution chapters, and the footer is the verdict — **Accepted**.
+the hero is the problem statement, stats are *Observations*, open source, personal projects and
+research are the solution chapters, and the footer is the verdict — **Accepted**.
 
 Live: https://jaypokale.vercel.app
 
@@ -16,6 +16,7 @@ Live: https://jaypokale.vercel.app
 
 ## Features
 
+- Chisle's star count is fetched live from the GitHub API (ISR, hourly)
 - SEO: prerendered HTML, Metadata API (OG/Twitter/canonical), JSON-LD Person
   schema, `sitemap.xml`, `robots.txt`, and `llms.txt` for LLM crawlers
 - Theme system: dark/light "paper" plus any accent "ink" — six presets

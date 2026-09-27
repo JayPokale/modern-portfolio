@@ -5,8 +5,8 @@ import Reveal from "./Reveal";
 const Classroom = () => (
   <section id="classroom" className="px-5 sm:px-10 lg:px-16 max-w-[1400px] mx-auto mt-32 sm:mt-48">
     <SectionHead
-      numeral="04"
-      kicker="§4 · Solution, part three"
+      numeral="05"
+      kicker="§5 · The origin story"
       title="Where it all began."
       note="the origin story. 20,000 witnesses, none of them paid."
     />

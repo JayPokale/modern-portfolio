@@ -4,11 +4,12 @@ import { motion } from "motion/react";
 import ThemeControl from "./ThemeControl";
 
 const items = [
-  ["observations", "§1", "§1"],
-  ["works", "§2", "§2"],
-  ["research", "§3", "§3"],
-  ["classroom", "§4", "§4"],
-  ["verdict", "verdict", "AC"],
+  ["observations", "§1", "evidence"],
+  ["open-source", "§2", "open source"],
+  ["projects", "§3", "projects"],
+  ["research", "§4", "research"],
+  ["classroom", "§5", "classroom"],
+  ["verdict", "AC", "verdict"],
 ] as const;
 
 const Nav = () => (
@@ -22,17 +23,15 @@ const Nav = () => (
       <a href="#top" className="display text-xl text-bone hover:text-ember transition-colors">
         JP<span className="text-ember">.</span>
       </a>
-      <div className="flex gap-5 sm:gap-8">
-        {items.map(([id, label, short]) => (
+      <div className="flex items-center gap-3.5 sm:gap-6 lg:gap-8">
+        {items.map(([id, short, name]) => (
           <a
             key={id}
             href={`#${id}`}
             className="mono-label link-sweep hover:!text-bone transition-colors"
           >
-            <span className="sm:hidden">{short}</span>
-            <span className="hidden sm:inline">
-              {id === "verdict" ? "verdict" : `${label} · ${id}`}
-            </span>
+            <span className="lg:hidden">{short}</span>
+            <span className="hidden lg:inline">{name}</span>
           </a>
         ))}
         <ThemeControl />

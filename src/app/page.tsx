@@ -1,7 +1,8 @@
 import Nav from "../components/Nav";
 import Problem from "../components/Problem";
 import Observations from "../components/Observations";
-import Works from "../components/Works";
+import OpenSource from "../components/OpenSource";
+import Projects from "../components/Projects";
 import Research from "../components/Research";
 import Classroom from "../components/Classroom";
 import Verdict from "../components/Verdict";
@@ -14,10 +15,15 @@ export default function Home() {
       <Problem />
       <Observations />
       <ChapterHook
-        target="#works"
-        line="But ratings only prove he can solve other people's problems — a lawyer would call that circumstantial. So he started shipping his own."
+        target="#open-source"
+        line="Ratings prove he solves other people's problems. So he started shipping his own — in public, where strangers can file issues."
       />
-      <Works />
+      <OpenSource />
+      <ChapterHook
+        target="#projects"
+        line="Not everything gets a README and a star count. Some things just quietly run in production and never call home."
+      />
+      <Projects />
       <ChapterHook
         target="#research"
         line="Then one of his systems retrieved a poisoned answer. He took it personally — so personally it became two theses. IIT Hyderabad is now funding the grudge."
