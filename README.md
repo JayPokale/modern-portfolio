@@ -130,6 +130,7 @@ npm run dev          # http://localhost:3000
 | `npm run build` | Type-checks and builds the production site |
 | `npm start` | Serves the production build |
 | `npm run typecheck` | Generates Next's route types, then runs `tsc` |
+| `npm run indexnow` | Announces every sitemap URL to IndexNow (Bing and friends) after a deploy |
 
 ## Editing content
 
@@ -152,7 +153,7 @@ date: 2026-09-27
 Drafts go in `content/drafts/`: git-ignored, visible only under `npm run dev`. Moving a file
 to `content/writing/` publishes it at `/writing/<file-name>` with its own canonical URL,
 `BlogPosting` structured data, a sitemap entry and an RSS item, and adds the "Writing" link
-and homepage appendix. To syndicate to dev.to or Hashnode, import
+and homepage appendix. After it deploys, `npm run indexnow` tells Bing. To syndicate to dev.to or Hashnode, import
 [`/writing/rss.xml`](https://jaypokale.me/writing/rss.xml) there with the canonical URL
 pointing back here.
 
