@@ -11,8 +11,7 @@ export const links = {
   instagram: "https://www.instagram.com/jaypokale.dev/",
   facebook: "https://www.facebook.com/jay.pokale.35",
   email: "mailto:jay.pokale.35@gmail.com",
-  // Blogger hasn't issued a certificate for this domain yet; switch to https once it has
-  dare2solve: "http://dare2solve.jaypokale.me",
+  dare2solve: "https://dare2solve.jaypokale.me",
 };
 
 const titleCase = (s: string) => s.replace(/\b\w/g, (c) => c.toUpperCase());
