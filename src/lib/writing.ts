@@ -92,10 +92,13 @@ function read(dir: string, draft: boolean): Post[] {
     });
 }
 
-/** Newest first. Drafts are included only outside production. */
+/** Newest first, then by slug. Drafts are included only outside production. */
 export function getPosts(): Post[] {
   const drafts = process.env.NODE_ENV === "production" ? [] : read(DRAFTS, true);
-  return [...read(PUBLISHED, false), ...drafts].sort((a, b) => b.date.localeCompare(a.date));
+  return [...read(PUBLISHED, false), ...drafts].sort(
+    // same-day posts fall back to slug order; readdir order differs between machines
+    (a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug),
+  );
 }
 
 export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug);
