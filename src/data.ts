@@ -8,6 +8,8 @@ export const links = {
   twitter: "https://x.com/JayPokale35",
   leetcode: "https://leetcode.com/u/jaypokale",
   codeforces: "https://codeforces.com/profile/rdx_panther",
+  instagram: "https://www.instagram.com/jaypokale.dev/",
+  facebook: "https://www.facebook.com/jay.pokale.35",
   email: "mailto:jay.pokale.35@gmail.com",
   // Blogger hasn't issued a certificate for this domain yet; switch to https once it has
   dare2solve: "http://dare2solve.jaypokale.me",

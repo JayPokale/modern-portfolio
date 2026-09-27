@@ -128,6 +128,8 @@ const jsonLd = {
         links.leetcode,
         links.codeforces,
         links.twitter,
+        links.instagram,
+        links.facebook,
         "https://www.npmjs.com/~jaypokale",
       ],
     },
