@@ -40,9 +40,20 @@
 
 ## Writing
 
-- "I publish the benchmarks my AI coding tool loses" (2026-09-27) — Chisle's
-  benchmark results, including the runs where it lost.
-  https://jaypokale.me/writing/chisle-benchmarks-it-loses
+All at https://jaypokale.me/writing (RSS: https://jaypokale.me/writing/rss.xml)
+
+- "I publish the benchmarks my AI coding tool loses" — Chisle's benchmark
+  results, including the runs where it lost.
+- "1,142 LeetCode problems in JavaScript, and the standard library it never
+  shipped" — the data structures behind a LeetCode Guardian rating in JS.
+- "Typed arrays that grow" — how typed-numarray works, with fresh benchmarks:
+  where it wins, ties and loses against native typed arrays.
+- "One developer, four platforms" — an office ledger for Android, iOS and the
+  web from one Expo codebase, over an Express API.
+- "Dare2Solve: 209 math puzzles, 20,000 people" — the history of the math
+  community Jay founded in 2021.
+- "My portfolio is a competitive-programming problem" — how jaypokale.me is
+  built.
 
 ## Note
 
