@@ -7,43 +7,56 @@ const Classroom = () => (
   <section id="origin" className="px-5 sm:px-10 lg:px-16 max-w-[1400px] mx-auto mt-32 sm:mt-48">
     <SectionHead
       numeral="05"
-      kicker="§5 · The origin story"
+      kicker="§5 · Solution, part four"
       title="Where it all began."
-      note="20,000 witnesses. None of them paid."
+      note="The origin story. 20,000 witnesses, none of them paid."
     />
 
-    <Reveal>
-      <p className="prose-serif text-xl sm:text-2xl text-dim max-w-[52ch]">
-        Before the ratings, a math page.{" "}
-        <a
-          href="https://dare2solve.vercel.app"
-          target="_blank"
-          rel="noreferrer"
-          className="link-sweep text-bone hover:text-ember transition-colors"
-        >
-          Dare2Solve
-        </a>{" "}
-        grew to <em className="display-italic text-bone">20,000 people</em>{" "}
-        solving problems they were told were too hard.{" "}
-        <span className="quip">Difficulty, it turns out, is mostly a rumor.</span>
-      </p>
-    </Reveal>
+    <div className="grid gap-12 lg:grid-cols-12">
+      <Reveal className="lg:col-span-7">
+        <p className="prose-serif text-xl sm:text-2xl text-dim max-w-[56ch]">
+          Before the ratings and the retrieval pipelines, there was a math page.{" "}
+          <a
+            href="https://dare2solve.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="link-sweep text-bone hover:text-ember transition-colors"
+          >
+            Dare2Solve
+          </a>{" "}
+          grew into a community of more than{" "}
+          <em className="display-italic text-bone">20,000 people</em> solving
+          problems they were told were too hard for them. I founded it, I still
+          run it, and it is still the best proof I have that{" "}
+          <span className="quip">difficulty is mostly a rumor.</span>
+        </p>
+      </Reveal>
 
-    <Reveal className="mt-16">
+      <Reveal delay={0.15} className="lg:col-span-5">
+        <p className="prose-serif text-lg text-dim">
+          The classroom cuts both ways — five years of collecting tools and the
+          scars that teach you how to hold them.
+        </p>
+      </Reveal>
+    </div>
+
+    <Reveal className="mt-16 sm:mt-20">
       <Caption
-        label="toolbox"
-        quip="Proficiency audited by the guy who wrote it."
-        className="mb-6"
+        label="toolbox — used in anger, sorted by era"
+        quip="Proficiency claims audited by the same guy who wrote them."
+        className="mb-8"
       />
-      <div className="space-y-5">
+      <div className="space-y-8">
         {toolbox.map((g) => (
           <div key={g.group} className="grid gap-3 lg:grid-cols-12">
-            <p className="font-mono text-sm text-dim lg:col-span-3 pt-2">{g.group}</p>
+            <p className="font-mono text-sm text-dim lg:col-span-3 pt-2">
+              {g.group}
+            </p>
             <ul className="flex flex-wrap gap-2.5 lg:col-span-9">
               {g.items.map((t) => (
                 <li
                   key={t}
-                  className="font-mono text-sm text-dim border rule border-solid px-3 py-1.5 hover:text-ember hover:border-ember transition-colors duration-300 cursor-default"
+                  className="font-mono text-sm text-dim border rule border-solid px-3 py-2 hover:text-ember hover:border-ember transition-colors duration-300 cursor-default"
                 >
                   {t}
                 </li>
