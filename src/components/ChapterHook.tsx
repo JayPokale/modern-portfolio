@@ -10,7 +10,7 @@ const ChapterHook = ({ line, target }: { line: string; target: string }) => (
         className="w-px h-14 sm:h-20 bg-gradient-to-b from-transparent via-rule to-ember/60"
         aria-hidden
       />
-      <p className="display display-italic text-[clamp(1.25rem,2.6vw,1.9rem)] text-dim group-hover:text-bone transition-colors duration-300 max-w-[46ch]">
+      <p className="display display-italic text-[clamp(1.25rem,2.6vw,1.9rem)] text-bone group-hover:text-ember transition-colors duration-300 max-w-[46ch]">
         {line}
       </p>
       <span className="mono-label !text-ember opacity-80 group-hover:opacity-100 transition-opacity">

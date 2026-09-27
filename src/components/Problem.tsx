@@ -54,7 +54,7 @@ const Problem = () => (
         className="flex flex-wrap justify-between gap-x-8 gap-y-2 border-b rule pb-4"
       >
         <span className="mono-label !text-ember">Problem J.</span>
-        <span className="mono-label">
+        <span className="mono-label !text-bone">
           time limit: one lifetime · memory: unbounded · sleep: segfaulted
         </span>
       </motion.div>
@@ -82,8 +82,8 @@ const Problem = () => (
         Researcher at{" "}
         <em className="display-italic text-bone">IIT Hyderabad</em>, top&nbsp;1%
         competitive programmer, author of AI tooling people actually star. This
-        page is the <em className="display-italic text-bone">editorial</em>.
-        Modesty was cut in code review.
+        page is the <em className="display-italic text-bone">editorial</em>.{" "}
+        <span className="quip">Modesty was cut in code review.</span>
       </motion.p>
     </motion.div>
 
@@ -108,11 +108,11 @@ const Problem = () => (
         </div>
         <div className="flex gap-4">
           <dt className="text-faint w-20 shrink-0">Scoring</dt>
-          <dd className="text-dim">partial credit not accepted.</dd>
+          <dd className="text-bone">partial credit not accepted.</dd>
         </div>
         <div className="flex gap-4">
           <dt className="text-faint w-20 shrink-0">Note</dt>
-          <dd className="text-dim">
+          <dd className="text-bone">
             it is guaranteed that a solution exists.
           </dd>
         </div>
@@ -124,8 +124,8 @@ const Problem = () => (
         className="flex flex-wrap items-baseline gap-x-7 gap-y-3 lg:justify-end"
         aria-label="Profiles"
       >
-        <span className="mono-label !text-faint w-full lg:w-auto lg:mr-2">
-          evidence, in case this sounds made up →
+        <span className="quip text-lg w-full lg:w-auto lg:mr-2">
+          Evidence, in case this sounds made up →
         </span>
         {proofLinks.map(([name, href]) => (
           <a
@@ -149,7 +149,7 @@ const Problem = () => (
       transition={{ delay: 1.4, duration: 0.9 }}
       className="group relative z-10 mt-14 flex flex-col items-center gap-3 text-center no-underline"
     >
-      <p className="display display-italic text-[clamp(1.15rem,2.2vw,1.6rem)] text-dim group-hover:text-bone transition-colors">
+      <p className="display display-italic text-[clamp(1.15rem,2.2vw,1.6rem)] text-bone group-hover:text-ember transition-colors">
         The judges demanded proof. He brought receipts.
       </p>
       <span className="mono-label !text-ember">chapter one ↓</span>

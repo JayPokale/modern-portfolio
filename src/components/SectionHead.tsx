@@ -24,9 +24,7 @@ const SectionHead = ({
         {title}
       </h2>
       {note && (
-        <p className="font-mono text-sm text-faint mt-4 max-w-[52ch]">
-          {note}
-        </p>
+        <p className="quip text-lg sm:text-xl mt-5 max-w-[46ch]">{note}</p>
       )}
     </Reveal>
   </div>

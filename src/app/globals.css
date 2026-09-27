@@ -156,6 +156,17 @@ body {
   line-height: 1.65;
 }
 
+/* punchlines — italic, full-strength ink: the jokes should read first */
+.quip {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 36, "SOFT" 50, "WONK" 1;
+  font-weight: 430;
+  line-height: 1.4;
+  color: var(--t-bone);
+  text-wrap: pretty;
+}
+
 /* underline sweep on links */
 .link-sweep {
   position: relative;
