@@ -1,11 +1,18 @@
 {
   "name": "jaypokale-portfolio",
   "private": true,
+  "description": "Jay Pokale's portfolio, written as a competitive-programming problem and its editorial.",
+  "homepage": "https://jaypokale.me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayPokale/modern-portfolio.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "motion": "^12.0.0",
