@@ -61,7 +61,7 @@ const Verdict = () => (
               key={name}
               href={href}
               target="_blank"
-              rel="noreferrer"
+              rel="me noreferrer"
               className="mono-label link-sweep !text-dim hover:!text-bone transition-colors"
             >
               {name}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SITE_URL } from "../data";
+import { SITE_URL, flagship, links } from "../data";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s · Jay Pokale",
   },
   description:
-    "Jay Pokale: graduate researcher at IIT Hyderabad (certified GraphRAG, semantic-cache integrity, multi-timescale learning), LeetCode Guardian (top 0.94%, peak 2285), Codeforces Expert (1799), creator of Chisle (open-source AI token-efficiency toolkit), and founder of the 20,000-strong Dare2Solve math community. This site is the editorial to Problem J.",
+    "Jay Pokale — researcher at IIT Hyderabad, top 1% competitive programmer (LeetCode Guardian, Codeforces Expert), creator of Chisle and founder of Dare2Solve.",
   keywords: [
     "Jay Pokale",
     "software engineer",
@@ -31,7 +31,10 @@ export const metadata: Metadata = {
   creator: "Jay Pokale",
   alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Jay",
+    lastName: "Pokale",
+    username: "JayPokale",
     url: SITE_URL,
     siteName: "Jay Pokale — Problem J.",
     title: "Jay Pokale — Problem J.",
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Jay Pokale — Problem J.",
     description:
       "Top 1% competitive programmer, IIT Hyderabad RAG researcher, founder of Dare2Solve. Verdict: Accepted.",
@@ -58,38 +61,87 @@ export const metadata: Metadata = {
   },
 };
 
-const personJsonLd = {
+const PERSON = `${SITE_URL}/#person`;
+
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Jay Pokale",
-  url: SITE_URL,
-  email: "mailto:jay.pokale.35@gmail.com",
-  image: `${SITE_URL}/Jay.png`,
-  jobTitle: "Software Engineer & Graduate Researcher",
-  affiliation: {
-    "@type": "CollegeOrUniversity",
-    name: "Indian Institute of Technology Hyderabad",
-  },
-  founder: {
-    "@type": "Organization",
-    name: "Dare2Solve",
-  },
-  knowsAbout: [
-    "Competitive Programming",
-    "Retrieval-Augmented Generation",
-    "GraphRAG",
-    "Cache Integrity",
-    "Continual Learning",
-    "Machine Learning",
-    "Full-Stack Development",
-    "Algorithms",
-  ],
-  sameAs: [
-    "https://github.com/JayPokale",
-    "https://www.linkedin.com/in/JayPokale",
-    "https://leetcode.com/u/jaypokale",
-    "https://codeforces.com/profile/rdx_panther",
-    "https://x.com/JayPokale35",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profile`,
+      url: SITE_URL,
+      name: "Jay Pokale — Problem J.",
+      mainEntity: { "@id": PERSON },
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      dateModified: new Date().toISOString(),
+    },
+    {
+      "@type": "Person",
+      "@id": PERSON,
+      name: "Jay Pokale",
+      givenName: "Jay",
+      familyName: "Pokale",
+      url: SITE_URL,
+      image: `${SITE_URL}/Jay.png`,
+      email: "mailto:jay.pokale.35@gmail.com",
+      jobTitle: "Software Engineer & Graduate Researcher",
+      description:
+        "Engineer and graduate researcher at IIT Hyderabad, top 1% competitive programmer, creator of Chisle, founder of Dare2Solve and powerlifter.",
+      affiliation: {
+        "@type": "CollegeOrUniversity",
+        name: "Indian Institute of Technology Hyderabad",
+        url: "https://www.iith.ac.in",
+      },
+      award: [
+        "LeetCode Guardian — top 1% worldwide, peak contest rating 2285",
+        "Codeforces Expert",
+      ],
+      knowsAbout: [
+        "Competitive Programming",
+        "Algorithms",
+        "Retrieval-Augmented Generation",
+        "GraphRAG",
+        "Semantic Cache Security",
+        "Continual Learning",
+        "Machine Learning",
+        "Full-Stack Development",
+        "Powerlifting",
+      ],
+      sameAs: [
+        links.github,
+        links.linkedin,
+        links.leetcode,
+        links.codeforces,
+        links.twitter,
+        "https://www.npmjs.com/~jaypokale",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Jay Pokale",
+      alternateName: "Problem J.",
+      inLanguage: "en",
+      publisher: { "@id": PERSON },
+    },
+    {
+      "@type": "Organization",
+      name: "Dare2Solve",
+      url: links.dare2solve,
+      description: "A mathematics problem-solving community of more than 20,000 members.",
+      founder: { "@id": PERSON },
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      name: flagship.title,
+      description: flagship.fact,
+      url: flagship.site,
+      codeRepository: flagship.href,
+      programmingLanguage: "JavaScript",
+      license: "https://opensource.org/licenses/MIT",
+      author: { "@id": PERSON },
+    },
   ],
 };
 
@@ -115,7 +167,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="grain relative">{children}</body>

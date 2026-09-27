@@ -133,7 +133,7 @@ const Problem = () => (
             key={name}
             href={href}
             target="_blank"
-            rel="noreferrer"
+            rel="me noreferrer"
             className="link-sweep mono-label !text-bone hover:!text-ember transition-colors"
           >
             {name}&nbsp;↗
