@@ -1,3 +1,5 @@
+export const SITE_URL = "https://jaypokale.me";
+
 export const links = {
   github: "https://github.com/JayPokale",
   linkedin: "https://www.linkedin.com/in/JayPokale",
@@ -86,7 +88,7 @@ export const upstream: Item[] = [
     title: "Ballerina",
     tag: "4 merged",
     note: "Layout shifts killed, a 404'ing Windows certificate revived. My React, their standards, everyone survived.",
-    href: "https://github.com/pulls?q=is%3Apr+author%3AJayPokale+repo%3Aballerina-platform%2Fballerina-dev-website+is%3Amerged",
+    href: "https://github.com/ballerina-platform/ballerina-dev-website/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
   },
   {
     title: "token-harness leaderboard",
@@ -109,7 +111,6 @@ export const projects: Item[] = [
     title: "GST Legal RAG",
     tag: "in production",
     note: "Retrieval over Indian tax law that abstains instead of inventing citations. Several professionals bill hourly for the opposite.",
-    href: "https://jaypokale.me",
   },
   {
     title: "Case-law Knowledge Graph",
@@ -131,7 +132,6 @@ export const projects: Item[] = [
     title: "AuthorsLog",
     tag: "archive",
     note: "Multi-user blogging platform, from the era when I said yes to everything.",
-    href: "https://authorslog.vercel.app",
   },
 ];
 

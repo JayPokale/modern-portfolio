@@ -4,7 +4,7 @@ Personal portfolio, framed as a competitive-programming problem and its editoria
 the hero is the problem statement, stats are *Observations*, open source, personal projects and
 research are the solution chapters, and the footer is the verdict — **Accepted**.
 
-Live: https://jaypokale.vercel.app
+Live: https://jaypokale.me
 
 ## Stack
 

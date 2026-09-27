@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-const SITE = "https://jaypokale.vercel.app";
+import { SITE_URL } from "../data";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
       "Jay Pokale — Engineer, Researcher & Top 1% Competitive Programmer",
@@ -28,12 +27,12 @@ export const metadata: Metadata = {
     "full-stack developer",
     "portfolio",
   ],
-  authors: [{ name: "Jay Pokale", url: SITE }],
+  authors: [{ name: "Jay Pokale", url: SITE_URL }],
   creator: "Jay Pokale",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: SITE,
+    url: SITE_URL,
     siteName: "Jay Pokale — Problem J.",
     title: "Jay Pokale — Problem J.",
     description:
@@ -63,9 +62,9 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Jay Pokale",
-  url: SITE,
+  url: SITE_URL,
   email: "mailto:jay.pokale.35@gmail.com",
-  image: `${SITE}/Jay.png`,
+  image: `${SITE_URL}/Jay.png`,
   jobTitle: "Software Engineer & Graduate Researcher",
   affiliation: {
     "@type": "CollegeOrUniversity",
