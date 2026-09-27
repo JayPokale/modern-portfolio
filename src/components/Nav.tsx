@@ -8,7 +8,7 @@ const items = [
   ["open-source", "§2", "open source"],
   ["projects", "§3", "projects"],
   ["lab", "§4", "lab"],
-  ["classroom", "§5", "classroom"],
+  ["origin", "§5", "origin"],
   ["verdict", "AC", "verdict"],
 ] as const;
 

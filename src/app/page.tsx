@@ -30,8 +30,8 @@ export default function Home() {
       />
       <Research />
       <ChapterHook
-        target="#classroom"
-        line="Every solver has an origin story. His starts years earlier — a math page, twenty thousand strangers, and absolutely no business plan."
+        target="#origin"
+        line="Every villain has an origin story. His has a math page and twenty thousand accomplices."
       />
       <Classroom />
       <ChapterHook

@@ -158,57 +158,19 @@ export const theses = [
 
 export const toolbox: { group: string; items: string[] }[] = [
   {
-    group: "languages — fluent in semicolons",
-    items: ["C++", "TypeScript", "JavaScript", "Python", "Go", "LaTeX"],
+    group: "languages",
+    items: ["C++", "TypeScript", "Python", "Go", "LaTeX"],
   },
   {
-    group: "algorithms — the DSA years",
-    items: [
-      "data structures",
-      "graph theory",
-      "dynamic programming",
-      "number theory",
-      "computational geometry",
-    ],
+    group: "AI / retrieval",
+    items: ["RAG", "hybrid retrieval", "rerankers", "LLM evals", "agents & MCP", "PyTorch"],
   },
   {
-    group: "AI / retrieval — the thesis arc",
-    items: [
-      "RAG pipelines",
-      "hybrid retrieval (BM25 ⊕ dense)",
-      "cross-encoder reranking",
-      "LLM evals & judges",
-      "multi-agent systems",
-      "MCP",
-      "PyTorch",
-      "NLP",
-    ],
+    group: "web",
+    items: ["React / Next", "Node / NestJS", "tRPC", "GraphQL", "three.js", "Motion"],
   },
   {
-    group: "web — the rent payers",
-    items: [
-      "React / Next",
-      "SolidJS",
-      "Node / NestJS",
-      "tRPC",
-      "GraphQL",
-      "Tailwind",
-      "three.js",
-      "GSAP / Motion",
-    ],
-  },
-  {
-    group: "infra & security — trust issues, professionally applied",
-    items: [
-      "MongoDB",
-      "MySQL",
-      "Docker",
-      "GitHub Actions",
-      "Cloudflare Workers",
-      "Vercel",
-      "web security / CTFs",
-      "network security",
-      "Arch Linux (btw)",
-    ],
+    group: "infra & trust issues",
+    items: ["Docker", "GitHub Actions", "Cloudflare Workers", "web security / CTFs", "Arch (btw)"],
   },
 ];
