@@ -1,3 +1,5 @@
+import type { CodeforcesStats, LeetCodeStats } from "./lib/stats";
+
 export const SITE_URL = "https://jaypokale.me";
 
 export const links = {
@@ -11,31 +13,34 @@ export const links = {
   dare2solve: "http://dare2solve.jaypokale.me",
 };
 
-export const observations = [
+const titleCase = (s: string) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+
+/** The four stat cards. The numbers arrive live (see lib/stats); the jokes don't. */
+export const observations = (lc: LeetCodeStats, cf: CodeforcesStats) => [
   {
     id: "01",
-    figure: 2285,
-    prefix: "",
+    figure: lc.peak,
     suffix: "",
     label: "LeetCode peak",
-    fact: "Guardian · top 0.94% worldwide",
+    fact: `${lc.badge} · top ${lc.topPercent}% worldwide`,
     quip: "The Easy ones were for morale.",
     href: links.leetcode,
   },
   {
     id: "02",
-    figure: 1799,
-    prefix: "",
+    figure: cf.rating,
     suffix: "",
     label: "Codeforces",
-    fact: "Expert · rdx_panther",
-    quip: "One point short of 1800. Too specific to be made up.",
+    fact: `${titleCase(cf.rank)} · rdx_panther`,
+    quip:
+      cf.rating === 1799
+        ? "One point short of 1800. Too specific to be made up."
+        : "The account is new. The grudge against hard problems is not.",
     href: links.codeforces,
   },
   {
     id: "03",
     figure: 20,
-    prefix: "",
     suffix: "k+",
     label: "Dare2Solve members",
     fact: "the math community I founded",
@@ -45,7 +50,6 @@ export const observations = [
   {
     id: "04",
     figure: 3,
-    prefix: "",
     suffix: "",
     label: "Theses in progress",
     fact: "IIT Hyderabad",
