@@ -32,10 +32,14 @@ const Classroom = () => (
         </p>
       </Reveal>
 
-      <Reveal delay={0.15} className="lg:col-span-5">
+      <Reveal delay={0.15} className="lg:col-span-5 flex flex-col gap-6">
         <p className="prose-serif text-lg text-dim">
           The classroom cuts both ways — five years of collecting tools and the
           scars that teach you how to hold them.
+        </p>
+        <p className="prose-serif text-lg text-dim">
+          Off the keyboard, I'm a powerlifter.{" "}
+          <span className="quip">The only PRs I set without a code review.</span>
         </p>
       </Reveal>
     </div>

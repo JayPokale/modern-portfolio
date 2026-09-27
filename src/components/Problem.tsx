@@ -81,8 +81,9 @@ const Problem = () => (
       >
         Researcher at{" "}
         <em className="display-italic text-bone">IIT Hyderabad</em>, top&nbsp;1%
-        competitive programmer, author of AI tooling people actually star. This
-        page is the <em className="display-italic text-bone">editorial</em>.{" "}
+        competitive programmer, powerlifter, and author of AI tooling people
+        actually star. This page is the{" "}
+        <em className="display-italic text-bone">editorial</em>.{" "}
         <span className="quip">Modesty was cut in code review.</span>
       </motion.p>
     </motion.div>
