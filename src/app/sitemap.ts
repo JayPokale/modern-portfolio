@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "../data";
+import { SITE_URL, flagship, links } from "../data";
 import { getPosts } from "../lib/writing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,5 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastEdit(p),
       priority: 0.7,
     })),
+    // sister sites; a sitemap may list other hosts only because the Search Console
+    // domain property (sc-domain:jaypokale.me) verifies every *.jaypokale.me host
+    { url: flagship.site, changeFrequency: "weekly", priority: 0.9 },
+    { url: links.dare2solve, changeFrequency: "weekly", priority: 0.9 },
   ];
 }
