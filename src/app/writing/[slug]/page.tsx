@@ -60,7 +60,7 @@ export default async function Article({ params }: Props) {
     mainEntityOfPage: url,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
-    image: `${SITE_URL}/opengraph-image.jpg`,
+    image: `${url}/opengraph-image`,
     inLanguage: "en",
     author: { "@type": "Person", "@id": PERSON_ID, name: "Jay Pokale", url: SITE_URL },
     publisher: { "@id": PERSON_ID },
