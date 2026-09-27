@@ -1,4 +1,4 @@
-import { toolbox } from "../data";
+import { links, toolbox } from "../data";
 import SectionHead from "./SectionHead";
 import Reveal from "./Reveal";
 import Caption from "./Caption";
@@ -17,7 +17,7 @@ const Classroom = () => (
         <p className="prose-serif text-xl sm:text-2xl text-dim max-w-[56ch]">
           Before the ratings and the retrieval pipelines, there was a math page.{" "}
           <a
-            href="https://dare2solve.vercel.app"
+            href={links.dare2solve}
             target="_blank"
             rel="noreferrer"
             className="link-sweep text-bone hover:text-ember transition-colors"

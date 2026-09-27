@@ -7,6 +7,8 @@ export const links = {
   leetcode: "https://leetcode.com/u/jaypokale",
   codeforces: "https://codeforces.com/profile/rdx_panther",
   email: "mailto:jay.pokale.35@gmail.com",
+  // Blogger hasn't issued a certificate for this domain yet; switch to https once it has
+  dare2solve: "http://dare2solve.jaypokale.me",
 };
 
 export const observations = [
@@ -38,7 +40,7 @@ export const observations = [
     label: "Dare2Solve members",
     fact: "the math community I founded",
     quip: "Told math was scary. Showed up anyway.",
-    href: "https://dare2solve.vercel.app",
+    href: links.dare2solve,
   },
   {
     id: "04",
