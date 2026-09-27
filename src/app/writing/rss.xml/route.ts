@@ -22,7 +22,7 @@ export function GET() {
       <pubDate>${new Date(`${p.date}T00:00:00Z`).toUTCString()}</pubDate>
       <description>${escape(p.description)}</description>
       <dc:creator>Jay Pokale</dc:creator>
-      <content:encoded>${cdata(p.html)}</content:encoded>
+      <content:encoded>${cdata(p.feedHtml)}</content:encoded>
     </item>`,
     )
     .join("\n");

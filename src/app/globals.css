@@ -243,6 +243,15 @@ body {
 }
 .article hr { border: 0; border-top: 1px solid var(--t-rule); margin: 2.5em 0; }
 .article img { max-width: 100%; height: auto; }
+.article .diagram { margin: 2.4em 0; overflow-x: auto; }
+/* fit the column, but never below ~72% of natural size; narrower screens scroll */
+.article .diagram svg {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: none;
+  width: clamp(calc(var(--w, 100%) * 0.72), 100%, var(--w, 100%));
+}
 
 /* underline sweep on links */
 .link-sweep {
