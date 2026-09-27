@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { links } from "../data";
 import Reveal from "./Reveal";
+import Caption from "./Caption";
 
 const social = [
   ["GitHub", links.github],
@@ -26,7 +27,7 @@ const Verdict = () => (
       </motion.div>
 
       <Reveal delay={0.1}>
-        <p className="prose-serif text-xl sm:text-3xl text-dim max-w-[40ch]">
+        <p className="prose-serif text-xl sm:text-3xl text-bone max-w-[40ch]">
           Every problem here started unsolved. If yours is{" "}
           <em className="display-italic text-bone">interesting enough</em>, it
           won't stay that way.
@@ -40,15 +41,17 @@ const Verdict = () => (
         >
           jay.pokale.35@gmail.com
         </a>
-        <p className="font-mono text-sm text-faint mt-6 leading-relaxed max-w-[52ch] mx-auto">
-          write fast — my inbox is the only queue I keep at O(1).
+        <p className="quip text-lg sm:text-xl mt-6 max-w-[40ch] mx-auto">
+          Write fast — my inbox is the only queue I keep at O(1).
         </p>
       </Reveal>
 
       <Reveal delay={0.3} className="w-full">
-        <p className="mono-label !text-faint mb-4">
-          the usual witnesses · no paywall, OnlyCommits
-        </p>
+        <Caption
+          label="the usual witnesses"
+          quip="No paywall. OnlyCommits."
+          className="justify-center mb-4"
+        />
         <nav
           className="flex flex-wrap justify-center gap-x-8 gap-y-3 pt-1"
           aria-label="Social links"
@@ -68,13 +71,15 @@ const Verdict = () => (
       </Reveal>
 
       <div className="w-full border-t rule pt-6 mt-8 flex flex-col sm:flex-row justify-between gap-3 text-left">
-        <p className="font-mono text-[0.72rem] text-faint">
-          © {new Date().getFullYear()} Jay Pokale · commit, committed,
-          institutionalized
+        <p className="font-mono text-xs text-dim">
+          © {new Date().getFullYear()} Jay Pokale ·{" "}
+          <span className="quip text-sm">commit, committed, institutionalized.</span>
         </p>
-        <p className="font-mono text-[0.72rem] text-faint">
-          no trackers · no cookies · no contact form (it never worked) · site
-          status: “trust me bro”
+        <p className="font-mono text-xs text-dim">
+          no trackers · no cookies · no contact form{" "}
+          <span className="quip text-sm">
+            (it never worked). Site status: “trust me bro”.
+          </span>
         </p>
       </div>
     </div>

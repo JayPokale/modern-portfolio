@@ -155,20 +155,20 @@ export const theses = [
   {
     title: "Corroboration Is All You Can Certify",
     field: "GraphRAG security",
-    roast:
-      "Poison a knowledge graph; I tell you, with proof, how much of the answer is still true. Usually less than the answer thinks.",
+    fact: "Poison a knowledge graph; I prove how much of the answer is still true.",
+    quip: "Usually less than the answer thinks.",
   },
   {
     title: "Cache Me If You Can",
     field: "semantic-cache integrity",
-    roast:
-      "Your semantic cache will serve an attacker's answer to your question. Found the law behind it, then the loophole. Attack success: 63% → 0.",
+    fact: "Semantic caches can serve an attacker's answer to your question. Found the law behind it, then the loophole: attack success 63% → 0.",
+    quip: "Condolences to the attackers.",
   },
   {
     title: "Some Memories Take Time",
     field: "continual learning",
-    roast:
-      "Zipf's law already decided how many learning timescales a model needs — about nine. Every deployed system has two. Nobody asked Zipf.",
+    fact: "Zipf's law already fixes how many learning timescales a model needs: about nine.",
+    quip: "Every deployed system has two. Nobody asked Zipf.",
   },
 ];
 

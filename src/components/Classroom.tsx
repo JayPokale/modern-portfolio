@@ -1,6 +1,7 @@
 import { toolbox } from "../data";
 import SectionHead from "./SectionHead";
 import Reveal from "./Reveal";
+import Caption from "./Caption";
 
 const Classroom = () => (
   <section id="origin" className="px-5 sm:px-10 lg:px-16 max-w-[1400px] mx-auto mt-32 sm:mt-48">
@@ -8,7 +9,7 @@ const Classroom = () => (
       numeral="05"
       kicker="§5 · The origin story"
       title="Where it all began."
-      note="20,000 witnesses, none of them paid."
+      note="20,000 witnesses. None of them paid."
     />
 
     <Reveal>
@@ -23,19 +24,21 @@ const Classroom = () => (
           Dare2Solve
         </a>{" "}
         grew to <em className="display-italic text-bone">20,000 people</em>{" "}
-        solving problems they were told were too hard. Difficulty, it turns out,
-        is mostly a rumor.
+        solving problems they were told were too hard.{" "}
+        <span className="quip">Difficulty, it turns out, is mostly a rumor.</span>
       </p>
     </Reveal>
 
     <Reveal className="mt-16">
-      <p className="mono-label mb-6">
-        toolbox · proficiency audited by the guy who wrote it
-      </p>
+      <Caption
+        label="toolbox"
+        quip="Proficiency audited by the guy who wrote it."
+        className="mb-6"
+      />
       <div className="space-y-5">
         {toolbox.map((g) => (
           <div key={g.group} className="grid gap-3 lg:grid-cols-12">
-            <p className="font-mono text-sm text-faint lg:col-span-3 pt-2">{g.group}</p>
+            <p className="font-mono text-sm text-dim lg:col-span-3 pt-2">{g.group}</p>
             <ul className="flex flex-wrap gap-2.5 lg:col-span-9">
               {g.items.map((t) => (
                 <li
