@@ -32,8 +32,8 @@
   --color-ember: var(--accent);
   --color-ac: var(--t-ac);
   --color-rule: var(--t-rule);
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
 html {
