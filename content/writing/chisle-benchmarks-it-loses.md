@@ -20,6 +20,19 @@ abstraction nobody asked for), and compressing the tool output your agent reads 
 command wires it into Claude Code, Cursor, Codex, Gemini, Copilot, Pi and five more. Zero
 dependencies, MIT licensed.
 
+```mermaid
+flowchart TD
+  accTitle: Where Chisle cuts an agent's token bill
+  accDescr: The ruleset shapes what the agent writes; the hook shrinks tool output before it enters the context that is re-sent on every request.
+  you[Your prompt] --> agent[Coding agent]
+  rules[Chisle ruleset<br/>terse prose, YAGNI code]:::accent -.-> agent
+  agent --> out[Output tokens<br/>billed once]
+  agent --> tools[Tool calls<br/>bash, grep, MCP]
+  tools --> hook[Chisle hook<br/>scrub, elide, dedup]:::accent
+  hook --> ctx[Context<br/>re-sent every request]
+  ctx -. next request .-> agent
+```
+
 ## The headline, with its asterisks attached
 
 Twenty live tasks. Same model, same prompts; the only difference between arms is the
@@ -80,6 +93,14 @@ Because the worst case is the number you actually pay for. An average is what a 
 a good week; the worst case is what it does to your bill on the day you're not watching.
 caveman's worst day cost 4.2× a bare model. ponytail, a tool built to write less, hit 2.3×.
 Chisle's worst day was 1.7×, it happened once, and the fix is merged.
+
+```mermaid
+xychart-beta
+  title "Worst single task, % of a bare model's output"
+  x-axis [caveman, ponytail, Chisle]
+  y-axis "% of bare model" 0 --> 450
+  bar [424, 227, 173]
+```
 
 And because a benchmark that never loses isn't measuring anything. If your tool wins every
 row, you either built the benchmark around your tool or you stopped running it.
