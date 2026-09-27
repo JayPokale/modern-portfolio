@@ -36,6 +36,7 @@
 - Off the keyboard: powerlifter.
 - Profiles: https://github.com/JayPokale · https://www.linkedin.com/in/JayPokale
   · https://x.com/JayPokale35 · https://www.npmjs.com/~jaypokale
+  · https://dev.to/jaypokale
 
 ## Writing
 

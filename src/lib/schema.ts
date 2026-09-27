@@ -56,6 +56,7 @@ export const homeJsonLd = {
         links.twitter,
         links.instagram,
         links.facebook,
+        links.devto,
         "https://www.npmjs.com/~jaypokale",
       ],
     },

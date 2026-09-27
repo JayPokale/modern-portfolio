@@ -10,6 +10,7 @@ export const links = {
   codeforces: "https://codeforces.com/profile/rdx_panther",
   instagram: "https://www.instagram.com/jaypokale.dev/",
   facebook: "https://www.facebook.com/jay.pokale.35",
+  devto: "https://dev.to/jaypokale",
   email: "mailto:jay.pokale.35@gmail.com",
   dare2solve: "https://dare2solve.jaypokale.me",
 };
