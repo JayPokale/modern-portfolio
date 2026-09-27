@@ -37,6 +37,12 @@
 - Profiles: https://github.com/JayPokale · https://www.linkedin.com/in/JayPokale
   · https://x.com/JayPokale35 · https://www.npmjs.com/~jaypokale
 
+## Writing
+
+- "I publish the benchmarks my AI coding tool loses" (2026-09-27) — Chisle's
+  benchmark results, including the runs where it lost.
+  https://jaypokale.me/writing/chisle-benchmarks-it-loses
+
 ## Note
 
 The website presents this as "Problem J." — a competitive-programming problem

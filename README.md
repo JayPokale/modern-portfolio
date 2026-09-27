@@ -30,7 +30,8 @@ flowchart TD
     S -- "some things never call home" --> R["<b>§3 Personal projects</b><br/>private and production work"]
     R -- "IIT Hyderabad funds the grudge" --> L["<b>§4 The lab</b><br/>three theses"]
     L -- "every villain has an origin story" --> G["<b>§5 Origin</b><br/>Dare2Solve and the toolbox"]
-    G -- "spoiler: it's green" --> V(["<b>Verdict: Accepted</b>"])
+    G --> W["<b>§6 Appendix</b><br/>articles"]
+    W -- "spoiler: it's green" --> V(["<b>Verdict: Accepted</b>"])
     classDef accepted fill:#12833d,stroke:#3ecf6a,color:#ffffff
     class V accepted
 ```
