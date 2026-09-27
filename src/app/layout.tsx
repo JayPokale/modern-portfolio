@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s · Jay Pokale",
   },
   description:
-    "Jay Pokale: engineer and graduate researcher at IIT Hyderabad (certifiably robust GraphRAG, cache integrity), LeetCode Guardian (top 0.94%, peak 2285), Codeforces Expert, founder of the 20,000-strong Dare2Solve math community, and builder of RDXmin and production RAG systems. This site is the editorial to Problem J.",
+    "Jay Pokale: graduate researcher at IIT Hyderabad (certified GraphRAG, semantic-cache integrity, multi-timescale learning), LeetCode Guardian (top 0.94%, peak 2285), Codeforces Expert (1799), creator of Chisle (open-source AI token-efficiency toolkit), and founder of the 20,000-strong Dare2Solve math community. This site is the editorial to Problem J.",
   keywords: [
     "Jay Pokale",
     "software engineer",
@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     "RAG",
     "retrieval-augmented generation",
     "GraphRAG",
-    "RDXmin",
+    "Chisle",
+    "open source",
     "Dare2Solve",
     "full-stack developer",
     "portfolio",
@@ -79,6 +80,7 @@ const personJsonLd = {
     "Retrieval-Augmented Generation",
     "GraphRAG",
     "Cache Integrity",
+    "Continual Learning",
     "Machine Learning",
     "Full-Stack Development",
     "Algorithms",

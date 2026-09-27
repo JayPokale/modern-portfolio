@@ -8,24 +8,27 @@
 
 - LeetCode: Guardian badge, peak contest rating 2285 (top 0.94% of 874,830),
   1,637 problems solved (341 Hard) — https://leetcode.com/u/jaypokale
-- Codeforces: Expert, rating 1770, handle rdx_panther —
+- Codeforces: Expert, rating 1799, handle rdx_panther —
   https://codeforces.com/profile/rdx_panther
-- Research (IIT Hyderabad, two theses in progress):
-  1. "Certifiably Robust GraphRAG for Multi-Hop Fraud Reasoning" — certified
-     robustness guarantees for graph-based retrieval-augmented generation
-     under retrieval corruption.
-  2. "The Locality–Integrity Law" — bounds on keyed cache pollution: attacker
-     cost vs. damage before detection.
-- Selected works:
-  - RDXmin — token-efficiency toolkit for AI coding agents; halved measured
-    output bills; ships as a Claude Code plugin. https://github.com/JayPokale/RDXmin
-  - GST Legal RAG — production retrieval system over Indian GST law with an
-    LLM-judged eval harness, exact-arithmetic routing, crash-resumable
-    ingestion, and abstention over fabrication.
+- Research (IIT Hyderabad, three theses in progress):
+  1. "Corroboration Is All You Can Certify" — certified defenses against
+     structural poisoning of GraphRAG (witness packing).
+  2. "Cache Me If You Can" — the locality–integrity law for semantic caches,
+     and a containment gate that escapes it.
+  3. "Some Memories Take Time" — an allocation law for multi-timescale
+     continual learning, set by the data's Zipf spectrum.
+- Open source:
+  - Chisle — token-efficiency toolkit for AI coding agents (Claude Code,
+    Cursor, Codex, Gemini and more); 500+ GitHub stars, zero dependencies,
+    publishes the benchmarks it loses. https://github.com/JayPokale/Chisle
   - typed-numarray — npm package for dynamic typed arrays in JavaScript.
     https://www.npmjs.com/package/typed-numarray
   - competitive — a documented DSA library for competitive programming in
     JavaScript. https://github.com/JayPokale/competitive
+  - Upstream: merged PRs to ballerina-platform/ballerina-dev-website.
+- Personal projects: GST Legal RAG (production retrieval over Indian GST law,
+  abstains rather than fabricate citations), a case-law knowledge graph,
+  Forge (durable task orchestration), Office Management (web + mobile).
 - Community: founder of Dare2Solve (20k+ members), mathematics problem-solving.
 - Profiles: https://github.com/JayPokale · https://www.linkedin.com/in/JayPokale
   · https://x.com/JayPokale35
