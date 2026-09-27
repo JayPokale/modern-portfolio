@@ -20,14 +20,14 @@ const Nav = () => (
     className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-ink/70 border-b rule"
   >
     <div className="max-w-[1400px] mx-auto px-5 sm:px-10 lg:px-16 h-14 flex items-center justify-between">
-      <a href="#top" className="display text-xl text-bone hover:text-ember transition-colors">
+      <a href="/" className="display text-xl text-bone hover:text-ember transition-colors">
         JP<span className="text-ember">.</span>
       </a>
       <div className="flex items-center gap-3.5 sm:gap-6 lg:gap-8">
         {items.map(([id, short, name]) => (
           <a
             key={id}
-            href={`#${id}`}
+            href={`/#${id}`}
             className="mono-label link-sweep hover:!text-bone transition-colors"
           >
             <span className="lg:hidden">{short}</span>

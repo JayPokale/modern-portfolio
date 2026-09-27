@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Nav from "../components/Nav";
 import Problem from "../components/Problem";
 import Observations from "../components/Observations";
@@ -7,10 +8,38 @@ import Research from "../components/Research";
 import Classroom from "../components/Classroom";
 import Verdict from "../components/Verdict";
 import ChapterHook from "../components/ChapterHook";
+import { homeJsonLd } from "../lib/schema";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "profile",
+    firstName: "Jay",
+    lastName: "Pokale",
+    username: "JayPokale",
+    url: "/",
+    siteName: "Jay Pokale",
+    title: "Jay Pokale — Problem J.",
+    description:
+      "Given one engineer and a stream of unreasonable problems, output shipped systems. Top 1% competitive programmer, IIT Hyderabad researcher, founder of Dare2Solve. This site is the editorial.",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jay Pokale — Problem J.",
+    description:
+      "Top 1% competitive programmer, IIT Hyderabad RAG researcher, founder of Dare2Solve. Verdict: Accepted.",
+    creator: "@JayPokale35",
+  },
+};
 
 export default function Home() {
   return (
     <div id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <Nav />
       <Problem />
       <Observations />
