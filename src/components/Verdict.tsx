@@ -27,7 +27,7 @@ const Verdict = () => (
 
       <Reveal delay={0.1}>
         <p className="prose-serif text-xl sm:text-3xl text-dim max-w-[40ch]">
-          Every problem on this page started out unsolved. If yours is{" "}
+          Every problem here started unsolved. If yours is{" "}
           <em className="display-italic text-bone">interesting enough</em>, it
           won't stay that way.
         </p>
@@ -41,8 +41,7 @@ const Verdict = () => (
           jay.pokale.35@gmail.com
         </a>
         <p className="font-mono text-sm text-faint mt-6 leading-relaxed max-w-[52ch] mx-auto">
-          write fast — before someone else hires me and you become the
-          suspicious side character in this documentary.
+          write fast — my inbox is the only queue I keep at O(1).
         </p>
       </Reveal>
 
@@ -70,13 +69,12 @@ const Verdict = () => (
 
       <div className="w-full border-t rule pt-6 mt-8 flex flex-col sm:flex-row justify-between gap-3 text-left">
         <p className="font-mono text-[0.72rem] text-faint">
-          © {new Date().getFullYear()} Jay Pokale · unintentional frontend
-          designer · commit, committed, institutionalized · set in Fraunces &
-          IBM Plex Mono
+          © {new Date().getFullYear()} Jay Pokale · commit, committed,
+          institutionalized
         </p>
         <p className="font-mono text-[0.72rem] text-faint">
-          no trackers · no cookies · no contact form — email works, the form
-          never did · site status: “trust me bro”
+          no trackers · no cookies · no contact form (it never worked) · site
+          status: “trust me bro”
         </p>
       </div>
     </div>

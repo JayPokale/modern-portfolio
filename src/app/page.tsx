@@ -36,7 +36,7 @@ export default function Home() {
       <Classroom />
       <ChapterHook
         target="#verdict"
-        line="Which brings this editorial, at last, to its verdict. Spoiler: it's green."
+        line="Which brings us to the verdict. Spoiler: it's green."
       />
       <Verdict />
     </div>

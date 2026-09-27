@@ -79,13 +79,11 @@ const Problem = () => (
         custom={1}
         className="prose-serif text-lg sm:text-xl text-dim max-w-[46ch]"
       >
-        Engineer & researcher at{" "}
-        <em className="display-italic text-bone">IIT Hyderabad</em>. I rank in
-        the top&nbsp;1% of competitive programmers worldwide, build retrieval
-        systems that cite their sources, and run a twenty-thousand-strong math
-        community. This page is the{" "}
-        <em className="display-italic text-bone">editorial</em>. Modesty was
-        cut in code review.
+        Researcher at{" "}
+        <em className="display-italic text-bone">IIT Hyderabad</em>, top&nbsp;1%
+        competitive programmer, author of AI tooling people actually star. This
+        page is the <em className="display-italic text-bone">editorial</em>.
+        Modesty was cut in code review.
       </motion.p>
     </motion.div>
 
