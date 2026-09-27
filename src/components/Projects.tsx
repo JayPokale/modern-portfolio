@@ -9,7 +9,7 @@ const Projects = () => (
       numeral="03"
       kicker="§3 · Solution, part two"
       title="Personal projects."
-      note="48 repos were audited. these survived. the snake game knows what it did."
+      note="48 repos were audited. These survived. The snake game knows what it did."
     />
     <Reveal>
       <ItemList items={projects} />

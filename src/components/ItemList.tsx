@@ -1,25 +1,26 @@
 import type { Item } from "../data";
 
-/** Compact two-column ledger: title + tag on top, one sarcastic line below. */
+/** Two-column ledger: title and tag, a quiet one-line fact, then the punchline. */
 const ItemList = ({ items }: { items: Item[] }) => (
   <ul className="grid sm:grid-cols-2 gap-x-12">
     {items.map((it) => {
       const inner = (
         <>
-          <span className="flex items-baseline gap-3">
+          <span className="flex flex-wrap items-baseline gap-x-3">
             <span className="prose-serif text-xl text-bone group-hover:text-ember transition-colors">
               {it.title}
             </span>
-            {it.tag && <span className="mono-label !text-faint">{it.tag}</span>}
+            {it.tag && <span className="mono-label">{it.tag}</span>}
             {it.href && (
               <span className="mono-label !text-ember opacity-0 group-hover:opacity-100 transition-opacity">
                 ↗
               </span>
             )}
           </span>
-          <span className="font-mono text-sm text-faint group-hover:text-dim transition-colors leading-relaxed">
-            {it.note}
-          </span>
+          {it.fact && (
+            <span className="font-mono text-xs text-dim leading-relaxed">{it.fact}</span>
+          )}
+          <span className="quip text-lg mt-1">{it.quip}</span>
         </>
       );
       return (
@@ -29,12 +30,12 @@ const ItemList = ({ items }: { items: Item[] }) => (
               href={it.href}
               target="_blank"
               rel="noreferrer"
-              className="group flex flex-col gap-1.5 py-6"
+              className="group flex flex-col gap-1 py-6"
             >
               {inner}
             </a>
           ) : (
-            <div className="group flex flex-col gap-1.5 py-6">{inner}</div>
+            <div className="group flex flex-col gap-1 py-6">{inner}</div>
           )}
         </li>
       );

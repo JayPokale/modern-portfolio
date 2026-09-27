@@ -16,7 +16,8 @@ export const observations = [
     prefix: "",
     suffix: "",
     label: "LeetCode peak",
-    note: "Guardian · top 0.94%. The Easy ones were for morale.",
+    fact: "Guardian · top 0.94% worldwide",
+    quip: "The Easy ones were for morale.",
     href: links.leetcode,
   },
   {
@@ -25,7 +26,8 @@ export const observations = [
     prefix: "",
     suffix: "",
     label: "Codeforces",
-    note: "Expert. One short of 1800 — proof it's not fake.",
+    fact: "Expert · rdx_panther",
+    quip: "One point short of 1800. Too specific to be made up.",
     href: links.codeforces,
   },
   {
@@ -34,7 +36,8 @@ export const observations = [
     prefix: "",
     suffix: "k+",
     label: "Dare2Solve members",
-    note: "Told math was scary. Showed up anyway.",
+    fact: "the math community I founded",
+    quip: "Told math was scary. Showed up anyway.",
     href: "https://dare2solve.vercel.app",
   },
   {
@@ -43,7 +46,8 @@ export const observations = [
     prefix: "",
     suffix: "",
     label: "Theses in progress",
-    note: "Most people write one. Sleep has filed a complaint.",
+    fact: "IIT Hyderabad",
+    quip: "Most people write one. Sleep has filed a complaint.",
     href: "#lab",
   },
 ];
@@ -55,30 +59,34 @@ export const flagship = {
   stars: 564,
   href: "https://github.com/JayPokale/Chisle",
   site: "https://chisle.jaypokale.me",
-  pitch:
-    "Makes AI coding agents talk less, build less, and say more — like a senior dev who bills by the syllable. 44% of the output tokens, eleven agents, zero dependencies.",
+  fact: "Makes AI coding agents talk less, build less and say more: 44% of the output tokens, eleven agents, zero dependencies.",
+  quip: "Like a senior dev who bills by the syllable.",
   roast:
-    "The only tool in its class that publishes the benchmarks it loses. Honesty: still not a growth strategy, somehow working anyway.",
+    "The only tool in its class that publishes the benchmarks it loses. Terrible growth strategy. Weirdly effective.",
 };
 
+/** `fact` is the plain claim, set small; `quip` is the punchline, set loudest. */
 export type Item = {
   title: string;
-  note: string;
-  href?: string;
   tag?: string;
+  fact?: string;
+  quip: string;
+  href?: string;
 };
 
 export const ownRepos: Item[] = [
   {
     title: "typed-numarray",
     tag: "npm",
-    note: "Typed arrays with normal-array manners. Published 2023, still working — rarer than it should be.",
+    fact: "dynamic typed arrays for JavaScript",
+    quip: "Published in 2023, still working. In npm years, that's retirement age.",
     href: "https://www.npmjs.com/package/typed-numarray",
   },
   {
     title: "competitive",
     tag: "JS",
-    note: "The STL JavaScript never shipped. Competitive programming in JS was a choice; my rating stands by it.",
+    fact: "the STL JavaScript never shipped",
+    quip: "Competitive programming in JavaScript was a choice. My rating stands by it.",
     href: "https://github.com/JayPokale/competitive",
   },
 ];
@@ -87,51 +95,59 @@ export const upstream: Item[] = [
   {
     title: "Ballerina",
     tag: "4 merged",
-    note: "Layout shifts killed, a 404'ing Windows certificate revived. My React, their standards, everyone survived.",
+    fact: "layout shifts fixed, a 404ing certificate link revived",
+    quip: "My React, their standards. Everyone survived review.",
     href: "https://github.com/ballerina-platform/ballerina-dev-website/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
   },
   {
     title: "token-harness leaderboard",
     tag: "open",
-    note: "Entered Chisle into someone else's benchmark. Confidence is a dependency, and we have zero.",
+    fact: "entered Chisle into someone else's benchmark",
+    quip: "Zero dependencies. Infinite confidence.",
     href: "https://github.com/pi-infected/token-harness-optimizer-leaderboard/pull/1",
   },
   {
     title: "Hacktoberfest ’22",
     tag: "6 merged",
-    note: "Burger menus, overflow bugs, a digital clock. The motive was the T-shirt. The fixes were real.",
+    fact: "burger menus, overflow bugs, a digital clock",
+    quip: "The motive was the T-shirt. The fixes were real.",
   },
 ];
 
-/** stdlib-js, p5.js, open-sauced, appwrite, ballerina-lang — closed, unmerged, character-building. */
+/** Upstream PRs that were closed without merging. */
 export const graveyard = ["stdlib-js", "p5.js", "open-sauced", "appwrite", "ballerina-lang"];
 
 export const projects: Item[] = [
   {
     title: "GST Legal RAG",
     tag: "in production",
-    note: "Retrieval over Indian tax law that abstains instead of inventing citations. Several professionals bill hourly for the opposite.",
+    fact: "retrieval over Indian GST law",
+    quip: "Abstains instead of inventing citations. Some professionals bill hourly for the opposite.",
   },
   {
     title: "Case-law Knowledge Graph",
     tag: "private",
-    note: "Scraped every tax judgment it could find and made them cite each other. Feeds the RAG above.",
+    fact: "tax judgments, linked by who cites whom",
+    quip: "LinkedIn for judgments, except the endorsements are binding.",
   },
   {
     title: "Forge",
     tag: "private",
-    note: "Durable task orchestration on Next.js and Cloudflare Workers. Tasks survive crashes; I mostly do too.",
+    fact: "durable task orchestration on Next.js and Cloudflare Workers",
+    quip: "Tasks survive crashes. I mostly do too.",
   },
   {
     title: "Office Management",
     tag: "4 platforms",
-    note: "Web, backend, Android, iOS. One developer, zero mercy.",
+    fact: "web, backend, Android and iOS",
+    quip: "One developer. Four platforms. Zero mercy.",
     href: "https://github.com/JayPokale/Office-management",
   },
   {
     title: "AuthorsLog",
     tag: "archive",
-    note: "Multi-user blogging platform, from the era when I said yes to everything.",
+    fact: "multi-user blogging platform",
+    quip: "From the era when I said yes to everything.",
   },
 ];
 

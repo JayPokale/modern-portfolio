@@ -36,7 +36,7 @@ const Observations = () => (
       numeral="01"
       kicker="§1 · Observations"
       title="First, the evidence."
-      note="the section recruiters scroll to first. hi. take your time — screenshots are allowed."
+      note="The section recruiters scroll to first. Hi. Screenshots are allowed."
     />
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l rule">
@@ -59,7 +59,8 @@ const Observations = () => (
             </span>
             <div>
               <p className="prose-serif text-lg text-bone">{o.label}</p>
-              <p className="font-mono text-[0.8rem] leading-relaxed text-dim mt-2">{o.note}</p>
+              <p className="font-mono text-xs text-dim mt-1">{o.fact}</p>
+              <p className="quip text-lg mt-3">{o.quip}</p>
             </div>
           </a>
         </Reveal>
