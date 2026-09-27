@@ -8,6 +8,8 @@ import Research from "../components/Research";
 import Classroom from "../components/Classroom";
 import Verdict from "../components/Verdict";
 import ChapterHook from "../components/ChapterHook";
+import LatestWriting from "../components/LatestWriting";
+import { getPosts } from "../lib/writing";
 import { homeJsonLd } from "../lib/schema";
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
-      <Nav />
+      <Nav writing={getPosts().length > 0} />
       <Problem />
       <Observations />
       <ChapterHook
@@ -63,6 +65,7 @@ export default function Home() {
         line="Every villain has an origin story. His has a math page and twenty thousand accomplices."
       />
       <Classroom />
+      <LatestWriting />
       <ChapterHook
         target="#verdict"
         line="Which brings us to the verdict. Spoiler: it's green."

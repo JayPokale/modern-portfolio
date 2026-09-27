@@ -45,8 +45,10 @@ flowchart LR
     subgraph build ["next build"]
         direction TB
         data["src/data.ts<br/>copy, links, stats"] --> sections["Section components"]
-        github[("GitHub API")] -- "Chisle stars<br/>revalidated hourly" --> sections
+        apis[("GitHub, LeetCode and<br/>Codeforces APIs")] -- "stars and ratings<br/>revalidated hourly" --> sections
+        md["content/writing<br/>Markdown articles"] --> articles["Article pages<br/>and RSS feed"]
         sections --> html["Static HTML<br/>sitemap.xml, robots.txt, llms.txt"]
+        articles --> html
     end
     html -- "Vercel, jaypokale.me" --> islands
     subgraph browser ["Browser"]
@@ -60,11 +62,14 @@ flowchart LR
 
 ## Features
 
-- **Static and fast.** One prerendered page. Chisle's GitHub star count is fetched at build
-  time and refreshed hourly (ISR), falling back to the last known count if the API is down.
-- **Search- and LLM-friendly.** Metadata API (Open Graph, Twitter, canonical URL), JSON-LD
-  `Person` schema, `sitemap.xml`, `robots.txt` and an [`llms.txt`](public/llms.txt) summary
-  for language-model crawlers.
+- **Static and fast.** Every page is prerendered. Chisle's star count and the LeetCode and
+  Codeforces ratings are fetched at build time and refreshed hourly (ISR), falling back to the
+  last known values if an API is down. Fonts are self-hosted.
+- **Search- and LLM-friendly.** A JSON-LD `ProfilePage` graph (the person, their awards,
+  affiliation and every profile), per-page canonical URLs, Open Graph cards with a preview
+  image, `sitemap.xml`, `robots.txt` and an [`llms.txt`](public/llms.txt) summary.
+- **Writing.** Markdown articles with `BlogPosting` structured data, an RSS feed and
+  git-ignored drafts; see [Writing](#writing).
 - **Particle portrait.** `Jay.png` is sampled into roughly 12,000 squares drawn by a custom
   shader; the cursor scatters them, and a grayscale source is tinted automatically.
 - **Themes.** Dark or light "paper" with any accent "ink" — six presets or a colour picker.
@@ -88,10 +93,14 @@ flowchart LR
 ## Project structure
 
 ```text
+content/
+├── writing/                published articles (Markdown)
+└── drafts/                 unpublished articles, git-ignored
 src/
 ├── app/
-│   ├── layout.tsx          metadata, JSON-LD, fonts, theme bootstrap
-│   ├── page.tsx            section order and the lines between sections
+│   ├── layout.tsx          shared metadata, fonts, theme bootstrap
+│   ├── page.tsx            homepage: section order, profile JSON-LD
+│   ├── writing/            article index, article pages, rss.xml
 │   ├── globals.css         design tokens, type styles, grain overlay
 │   ├── robots.ts
 │   └── sitemap.ts
@@ -100,6 +109,7 @@ src/
 │   ├── ParticlePortrait.tsx
 │   ├── OpenSource.tsx      fetches Chisle's live star count
 │   └── …
+├── lib/                    live stats, structured data, the article loader
 └── data.ts                 every word of copy, every link and stat
 public/                     portrait, favicons, llms.txt
 ```
@@ -125,6 +135,25 @@ npm run dev          # http://localhost:3000
 All copy lives in [`src/data.ts`](src/data.ts); components only decide layout. Entries pair a
 `fact`, set small, with a `quip`, set loudest. To add a project, append it to `projects`; to
 add an open-source repo, append it to `ownRepos` or `upstream`.
+
+## Writing
+
+Articles are Markdown files with front matter:
+
+```md
+---
+title: "The title, as it should appear in search results"
+description: "One or two sentences for the snippet and link previews."
+date: 2026-09-27
+---
+```
+
+Drafts go in `content/drafts/`: git-ignored, visible only under `npm run dev`. Moving a file
+to `content/writing/` publishes it at `/writing/<file-name>` with its own canonical URL,
+`BlogPosting` structured data, a sitemap entry and an RSS item, and adds the "Writing" link
+and homepage appendix. To syndicate to dev.to or Hashnode, import
+[`/writing/rss.xml`](https://jaypokale.me/writing/rss.xml) there with the canonical URL
+pointing back here.
 
 ## Deployment
 

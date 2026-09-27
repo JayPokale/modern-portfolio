@@ -7,3 +7,5 @@ next-env.d.ts
 .env*
 .vercel
 yarn-error.log
+# unpublished articles: shown by `npm run dev`, never committed or deployed
+/content/drafts/

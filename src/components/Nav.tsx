@@ -12,7 +12,8 @@ const items = [
   ["verdict", "AC", "verdict"],
 ] as const;
 
-const Nav = () => (
+// `writing` adds the link once at least one article is published
+const Nav = ({ writing = false }: { writing?: boolean }) => (
   <motion.nav
     initial={{ y: -24, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
@@ -34,6 +35,12 @@ const Nav = () => (
             <span className="hidden lg:inline">{name}</span>
           </a>
         ))}
+        {writing && (
+          <a href="/writing" className="mono-label link-sweep hover:!text-bone transition-colors">
+            <span className="lg:hidden" aria-label="writing">✎</span>
+            <span className="hidden lg:inline">writing</span>
+          </a>
+        )}
         <ThemeControl />
       </div>
     </div>

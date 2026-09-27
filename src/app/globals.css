@@ -167,6 +167,83 @@ body {
   text-wrap: pretty;
 }
 
+/* long-form articles (rendered Markdown) */
+.article {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 18, "SOFT" 20, "WONK" 0;
+  font-weight: 380;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--t-bone);
+}
+.article > * + * { margin-top: 1.3em; }
+.article h2,
+.article h3 {
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 1;
+  font-weight: 560;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.article h2 { font-size: 1.9rem; margin-top: 2.2em; }
+.article h3 { font-size: 1.35rem; margin-top: 1.8em; }
+.article a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article strong { font-weight: 600; }
+.article ul { list-style: disc; padding-left: 1.4em; }
+.article ol { list-style: decimal; padding-left: 1.4em; }
+.article li + li { margin-top: 0.4em; }
+.article blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.2em;
+  font-style: italic;
+  color: var(--t-dim);
+}
+.article code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--t-ink-2);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.article pre {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--t-ink-2);
+  border: 1px solid var(--t-rule);
+  padding: 1em 1.2em;
+  overflow-x: auto;
+}
+.article pre code { background: none; padding: 0; font-size: inherit; }
+.article table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.article th,
+.article td {
+  border-bottom: 1px solid var(--t-rule);
+  padding: 0.55em 0.9em;
+  text-align: right;
+  white-space: nowrap;
+}
+.article th:first-child,
+.article td:first-child { text-align: left; }
+.article th {
+  color: var(--t-dim);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+.article hr { border: 0; border-top: 1px solid var(--t-rule); margin: 2.5em 0; }
+.article img { max-width: 100%; height: auto; }
+
 /* underline sweep on links */
 .link-sweep {
   position: relative;
