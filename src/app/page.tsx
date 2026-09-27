@@ -25,8 +25,8 @@ export default function Home() {
       />
       <Projects />
       <ChapterHook
-        target="#research"
-        line="Then one of his systems retrieved a poisoned answer. He took it personally — so personally it became two theses. IIT Hyderabad is now funding the grudge."
+        target="#lab"
+        line="Then one of his systems retrieved a poisoned answer. He took it personally. IIT Hyderabad is now funding the grudge — times three."
       />
       <Research />
       <ChapterHook

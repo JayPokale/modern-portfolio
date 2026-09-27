@@ -7,7 +7,7 @@ const items = [
   ["observations", "§1", "evidence"],
   ["open-source", "§2", "open source"],
   ["projects", "§3", "projects"],
-  ["research", "§4", "research"],
+  ["lab", "§4", "lab"],
   ["classroom", "§5", "classroom"],
   ["verdict", "AC", "verdict"],
 ] as const;

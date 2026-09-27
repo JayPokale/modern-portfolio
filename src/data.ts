@@ -42,7 +42,7 @@ export const observations = [
     suffix: "",
     label: "Theses in progress",
     note: "Most people write one. Sleep has filed a complaint.",
-    href: "#research",
+    href: "#lab",
   },
 ];
 
@@ -135,26 +135,26 @@ export const projects: Item[] = [
   },
 ];
 
-export const research = {
-  institution: "IIT Hyderabad",
-  area: "Certifiably Robust GraphRAG for Multi-Hop Fraud Reasoning",
-  summary:
-    "My thesis work sits where retrieval systems meet adversaries — two theses, one grudge. The first: certified robustness for graph-based RAG — what can you still guarantee about a multi-hop answer when some of what it retrieved was poisoned? The second, ‘The Locality–Integrity Law’: how much damage keyed cache pollution can do before anyone notices, and exactly what it costs the attacker. Underneath both, the theory of ranking from pairwise comparisons.",
-  readings: [
-    {
-      title: "Certifiably Robust RAG against Retrieval Corruption",
-      authors: "Xiang, Wu, Zhong, Wagner, Chen, Mittal — ICML 2024",
-    },
-    {
-      title: "Simple, Robust and Optimal Ranking from Pairwise Comparisons",
-      authors: "Shah & Wainwright — JMLR 2018",
-    },
-    {
-      title: "Active Ranking using Pairwise Comparisons",
-      authors: "Jamieson & Nowak — NIPS 2011",
-    },
-  ],
-};
+export const theses = [
+  {
+    title: "Corroboration Is All You Can Certify",
+    field: "GraphRAG security",
+    roast:
+      "Poison a knowledge graph; I tell you, with proof, how much of the answer is still true. Usually less than the answer thinks.",
+  },
+  {
+    title: "Cache Me If You Can",
+    field: "semantic-cache integrity",
+    roast:
+      "Your semantic cache will serve an attacker's answer to your question. Found the law behind it, then the loophole. Attack success: 63% → 0.",
+  },
+  {
+    title: "Some Memories Take Time",
+    field: "continual learning",
+    roast:
+      "Zipf's law already decided how many learning timescales a model needs — about nine. Every deployed system has two. Nobody asked Zipf.",
+  },
+];
 
 export const toolbox: { group: string; items: string[] }[] = [
   {
