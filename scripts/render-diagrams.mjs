@@ -58,7 +58,7 @@ const THEME = {
   fontSize: "15px",
   xyChart: {
     backgroundColor: "#000001",
-    plotColorPalette: "#0d0d0d",
+    plotColorPalette: "#0d0d0d, #040404", // accent, then dim for a second series
     titleColor: "#030303",
     xAxisLabelColor: "#030303",
     yAxisLabelColor: "#030303",
@@ -108,6 +108,7 @@ const targets = [
 ];
 
 const fontFace = await plexMono();
+const failures = [];
 const browser = await chromium.launch({ executablePath: BROWSER });
 const page = await browser.newPage({ deviceScaleFactor: 2 });
 await page.setContent(`<html><head><style>${fontFace} body{margin:0;background:#0b0a08}</style></head><body></body></html>`);
@@ -132,7 +133,9 @@ for (const { dir, svgDir, pngDir } of targets) {
     const id = diagramId(source);
     wanted.add(id);
     const isFlow = /^\s*(flowchart|graph)\b/m.test(source);
-    const svg = await page.evaluate(
+    let svg;
+    try {
+      svg = await page.evaluate(
       async ({ id, source, sentinels }) => {
         const { svg } = await window.mermaid.render(id, source);
         const host = document.createElement("div");
@@ -157,7 +160,12 @@ for (const { dir, svgDir, pngDir } of targets) {
         return el.outerHTML;
       },
       { id, source: isFlow ? `${source}\n${ACCENT_CLASS}` : source, sentinels: SENTINELS },
-    );
+      );
+    } catch (error) {
+      // report and keep going; the article falls back to showing the source as code
+      failures.push(`${dir}/${file}: ${error.message.split("\n").slice(0, 4).join("\n  ")}`);
+      continue;
+    }
 
     let out = svg.replace(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/g, (m, r, g, b) => {
       const hex = "#" + [r, g, b].map((n) => (+n).toString(16).padStart(2, "0")).join("");
@@ -193,3 +201,8 @@ for (const { dir, svgDir, pngDir } of targets) {
 }
 
 await browser.close();
+
+if (failures.length) {
+  console.error(`\n${failures.length} diagram(s) failed to render:\n${failures.join("\n")}`);
+  process.exitCode = 1;
+}
