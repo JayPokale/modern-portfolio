@@ -46,6 +46,9 @@ export const homeJsonLd = {
         "Continual Learning",
         "Machine Learning",
         "Full-Stack Development",
+        "Open Source",
+        "ClickHouse",
+        "LanceDB",
         "Powerlifting",
       ],
       sameAs: [
