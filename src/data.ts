@@ -64,10 +64,10 @@ export const observations = (lc: LeetCodeStats, cf: CodeforcesStats) => [
 export const flagship = {
   repo: "JayPokale/Chisle",
   title: "Chisle",
-  stars: 564,
+  stars: 740,
   href: "https://github.com/JayPokale/Chisle",
   site: "https://chisle.jaypokale.me",
-  fact: "Makes AI coding agents talk less, build less and say more: 44% of the output tokens, eleven agents, zero dependencies.",
+  fact: "Makes AI coding agents talk less, build less, read less and say more: answers about half as long, oversized tool output trimmed ~46%, same tasks passed. Thirteen agents, zero dependencies.",
   quip: "Like a senior dev who bills by the syllable.",
   roast:
     "The only tool in its class that publishes the benchmarks it loses. Terrible growth strategy. Weirdly effective.",
@@ -97,9 +97,44 @@ export const ownRepos: Item[] = [
     quip: "Competitive programming in JavaScript was a choice. My rating stands by it.",
     href: "https://github.com/JayPokale/competitive",
   },
+  {
+    title: "git séance",
+    tag: "GraphRAG",
+    fact: "ask a dead repo why it did what it did; every claim cites an issue or commit",
+    quip: "Necromancy, but with citations. The code deletes any the model makes up.",
+    href: "https://github.com/JayPokale/git-seance",
+  },
 ];
 
 export const upstream: Item[] = [
+  {
+    title: "ClickHouse",
+    tag: "24 merged",
+    fact: "Parquet, Arrow and GeoParquet readers, format detection, a Geometry crash, docs examples that now run",
+    quip: "A database that does a billion rows a second. I fixed the ones it misread.",
+    href: "https://github.com/ClickHouse/ClickHouse/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
+  },
+  {
+    title: "LanceDB",
+    tag: "4 merged",
+    fact: "pydantic Literal/time/timedelta fields, FTS scores kept through RRF and MRR rerankers",
+    quip: "Retrieval is my thesis. Fixing someone else's reranker was field work.",
+    href: "https://github.com/lancedb/lancedb/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
+  },
+  {
+    title: "Interledger",
+    tag: "9 merged",
+    fact: "Rhyza Admin API endpoints, Open Payments grant spec, Web Monetization extension and standard",
+    quip: "Contributed to the future of payments. Still paid nothing. Very on brand.",
+    href: "https://github.com/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged+org%3Ainterledger",
+  },
+  {
+    title: "Temporal",
+    tag: "1 merged",
+    fact: "Python SDK: unset retry delay deserializes to None",
+    quip: "Durable execution, now durably correct about nothing.",
+    href: "https://github.com/temporalio/sdk-python/pulls?q=is%3Apr+author%3AJayPokale",
+  },
   {
     title: "Ballerina",
     tag: "4 merged",
