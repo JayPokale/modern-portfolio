@@ -3,27 +3,14 @@ import SectionHead from "./SectionHead";
 import Reveal from "./Reveal";
 import ItemList from "./ItemList";
 import Caption from "./Caption";
-
-// live from GitHub, re-checked hourly (ISR); falls back to the last known count
-async function getStars() {
-  try {
-    const res = await fetch(`https://api.github.com/repos/${flagship.repo}`, {
-      headers: { Accept: "application/vnd.github+json" },
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) return flagship.stars;
-    const json = (await res.json()) as { stargazers_count?: number };
-    return json.stargazers_count ?? flagship.stars;
-  } catch {
-    return flagship.stars;
-  }
-}
+import FollowGitHub from "./FollowGitHub";
+import { githubCount } from "../lib/github";
 
 const outLink =
   "mono-label link-sweep !text-bone hover:!text-ember transition-colors";
 
 const OpenSource = async () => {
-  const stars = await getStars();
+  const stars = await githubCount(`repos/${flagship.repo}`, "stargazers_count", flagship.stars);
 
   return (
     <section id="open-source" className="px-5 sm:px-10 lg:px-16 max-w-[1400px] mx-auto mt-32 sm:mt-48">
@@ -55,6 +42,11 @@ const OpenSource = async () => {
             </p>
             <p className="quip text-base">
               Live from GitHub. None purchased, all emotionally earned.
+            </p>
+            <p className="font-mono text-sm sm:text-base text-bone border rule px-4 py-3 mt-2 w-fit">
+              <span className="text-ember select-none">$ </span>
+              <span className="select-all">{flagship.install}</span>
+              <span className="text-dim select-none">{"  "}# one command, thirteen agents</span>
             </p>
             <p className="flex gap-6 pt-2">
               <a href={flagship.href} target="_blank" rel="noreferrer" className={outLink}>
@@ -90,6 +82,8 @@ const OpenSource = async () => {
           Deeply character-building. We don't talk about it.
         </p>
       </Reveal>
+
+      <FollowGitHub />
     </section>
   );
 };
