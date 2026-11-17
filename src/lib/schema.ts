@@ -49,6 +49,7 @@ export const homeJsonLd = {
         "Open Source",
         "ClickHouse",
         "LanceDB",
+        "Pydantic",
         "Powerlifting",
       ],
       sameAs: [

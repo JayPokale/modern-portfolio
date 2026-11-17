@@ -20,7 +20,7 @@
      continual learning, set by the data's Zipf spectrum.
 - Open source:
   - Chisle — token-efficiency toolkit for AI coding agents (Claude Code,
-    Pi, Cursor, Codex, Gemini and 8 more); 700+ GitHub stars, zero dependencies,
+    Pi, Cursor, Codex, Gemini and 8 more); 1,100+ GitHub stars, zero dependencies,
     publishes the benchmarks it loses. https://chisle.jaypokale.me ·
     https://github.com/JayPokale/Chisle
   - typed-numarray — npm package for dynamic typed arrays in JavaScript.
@@ -31,7 +31,7 @@
     lance-graph, local Gemma); every claim cites its source.
     https://github.com/JayPokale/git-seance
   - Upstream: 24 merged PRs to ClickHouse (Parquet/Arrow/GeoParquet readers,
-    format detection, docs), 4 to LanceDB, 9 across Interledger (Rhyza, Open
+    format detection, docs) plus 1 to click-ui, 4 to LanceDB, 1 to Pydantic Logfire, 9 across Interledger (Rhyza, Open
     Payments, Web Monetization), 1 to Temporal's Python SDK, 4 to Ballerina.
 - Personal projects: GST Legal RAG (production retrieval over Indian GST law,
   abstains rather than fabricate citations), a case-law knowledge graph,

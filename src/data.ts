@@ -64,9 +64,10 @@ export const observations = (lc: LeetCodeStats, cf: CodeforcesStats) => [
 export const flagship = {
   repo: "JayPokale/Chisle",
   title: "Chisle",
-  stars: 740,
+  stars: 1162,
   href: "https://github.com/JayPokale/Chisle",
   site: "https://chisle.jaypokale.me",
+  install: "npx chisle",
   fact: "Makes AI coding agents talk less, build less, read less and say more: answers about half as long, oversized tool output trimmed ~46%, same tasks passed. Thirteen agents, zero dependencies.",
   quip: "Like a senior dev who bills by the syllable.",
   roast:
@@ -109,8 +110,8 @@ export const ownRepos: Item[] = [
 export const upstream: Item[] = [
   {
     title: "ClickHouse",
-    tag: "24 merged",
-    fact: "Parquet, Arrow and GeoParquet readers, format detection, a Geometry crash, docs examples that now run",
+    tag: "25 merged",
+    fact: "Parquet, Arrow and GeoParquet readers, format detection, a Geometry crash, docs examples that now run; plus a keyboard-accessible SplitButton in click-ui",
     quip: "A database that does a billion rows a second. I fixed the ones it misread.",
     href: "https://github.com/ClickHouse/ClickHouse/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
   },
@@ -127,6 +128,13 @@ export const upstream: Item[] = [
     fact: "Rhyza Admin API endpoints, Open Payments grant spec, Web Monetization extension and standard",
     quip: "Contributed to the future of payments. Still paid nothing. Very on brand.",
     href: "https://github.com/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged+org%3Ainterledger",
+  },
+  {
+    title: "Pydantic Logfire",
+    tag: "1 merged",
+    fact: "logging handler reports bad log calls instead of raising, with arguments scrubbed",
+    quip: "Your logger no longer crashes your app. It also no longer prints your password.",
+    href: "https://github.com/pydantic/logfire/pulls?q=is%3Apr+author%3AJayPokale+is%3Amerged",
   },
   {
     title: "Temporal",
