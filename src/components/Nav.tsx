@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import ThemeControl from "./ThemeControl";
+import { links } from "../data";
 
 const items = [
   ["observations", "§1", "evidence"],
@@ -29,7 +30,7 @@ const Nav = ({ writing = false }: { writing?: boolean }) => (
           <a
             key={id}
             href={`/#${id}`}
-            className="mono-label link-sweep hover:!text-bone transition-colors"
+            className="mono-label link-sweep hover:!text-bone transition-colors whitespace-nowrap"
           >
             <span className="lg:hidden">{short}</span>
             <span className="hidden lg:inline">{name}</span>
@@ -41,6 +42,14 @@ const Nav = ({ writing = false }: { writing?: boolean }) => (
             <span className="hidden lg:inline">writing</span>
           </a>
         )}
+        <a
+          href={links.github}
+          target="_blank"
+          rel="me noreferrer"
+          className="hidden xl:inline-flex mono-label border rule px-3 py-1.5 hover:!text-ink hover:bg-ember hover:border-ember transition-colors"
+        >
+          follow&nbsp;↗
+        </a>
         <ThemeControl />
       </div>
     </div>
