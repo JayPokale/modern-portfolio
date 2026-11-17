@@ -68,7 +68,7 @@ export const flagship = {
   href: "https://github.com/JayPokale/Chisle",
   site: "https://chisle.jaypokale.me",
   install: "npx chisle",
-  fact: "Makes AI coding agents talk less, build less, read less and say more: answers about half as long, oversized tool output trimmed ~46%, same tasks passed. Thirteen agents, zero dependencies.",
+  fact: "Makes AI coding agents talk less, build less, read less and say more: answers 45% shorter, oversized tool output cut 48%, and 156 of 156 graded answers still correct. Thirteen agents, zero dependencies.",
   quip: "Like a senior dev who bills by the syllable.",
   roast:
     "The only tool in its class that publishes the benchmarks it loses. Terrible growth strategy. Weirdly effective.",

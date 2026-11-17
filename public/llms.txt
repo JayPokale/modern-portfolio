@@ -9,7 +9,7 @@
 - LeetCode: Guardian badge (top 1% of ~880,000 contest participants), peak
   contest rating 2285, 1,637 problems solved (341 Hard) —
   https://leetcode.com/u/jaypokale
-- Codeforces: Expert (rating 1799 as of September 2026), handle rdx_panther —
+- Codeforces: Expert (rating 1799 as of November 2026), handle rdx_panther —
   https://codeforces.com/profile/rdx_panther
 - Research (IIT Hyderabad, three theses in progress):
   1. "Corroboration Is All You Can Certify" — certified defenses against

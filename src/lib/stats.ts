@@ -8,7 +8,7 @@ const UA = "Mozilla/5.0 (compatible; jaypokale.me)";
 export type LeetCodeStats = { peak: number; topPercent: number; badge: string };
 export type CodeforcesStats = { rating: number; rank: string };
 
-const leetcodeFallback: LeetCodeStats = { peak: 2285, topPercent: 0.95, badge: "Guardian" };
+const leetcodeFallback: LeetCodeStats = { peak: 2285, topPercent: 0.96, badge: "Guardian" };
 const codeforcesFallback: CodeforcesStats = { rating: 1799, rank: "expert" };
 
 type LeetCodeResponse = {
